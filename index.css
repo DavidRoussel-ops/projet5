@@ -1,0 +1,36 @@
+#teddies{
+    display: none;
+}
+
+#cameras{
+    display: none;
+}
+
+#meubles{
+    display: none;
+}
+
+.list-of-teddies{
+    display: flex;
+}
+
+.list-of-cam{
+    display: flex;
+}
+
+.List-of-furniture{
+    display: flex;
+}
+
+.name{
+    color: red;
+}
+
+.price{
+    color: darkblue;
+}
+
+img{
+    width: 120px;
+    height: 100px;
+}
