@@ -34,3 +34,17 @@ img{
     width: 120px;
     height: 100px;
 }
+
+h1{
+    height: 4em;
+    border: 1px solid blueviolet;
+    text-align: center;
+    padding-top: 1.2em;
+    background-color: blueviolet;
+    color: white;
+}
+
+section{
+    margin-left: auto;
+    margin-right: auto;
+}
