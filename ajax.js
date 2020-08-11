@@ -49,6 +49,12 @@ function displayTeddies(teddies) {
         teddyDesc.setAttribute('class', 'descrip');
         teddyDesc.textContent = teddy.description;
         teddyDiv.appendChild(teddyDesc);
+
+        //Cinquième élément pour le lien
+        let teddyLink = document.createElement('a');
+        teddyLink.setAttribute('href', '#');
+        teddyLink.textContent = "cliquer ici";
+        teddyDiv.appendChild(teddyLink);
     }
     document.getElementById("teddies").appendChild(ListOfTeddies);
 }
