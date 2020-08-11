@@ -43,6 +43,12 @@ function displayMeubles(meubles) {
         let meublePicture = document.createElement('img');
         meublePicture.setAttribute('src', meuble.imageUrl);
         meubleDiv.appendChild(meublePicture);
+
+        //Quatrième élément pour la description
+        let meubleDesc = document.createElement('div');
+        meubleDesc.setAttribute('class', 'description');
+        meubleDesc.textContent = meuble.description;
+        meubleDiv.appendChild(meubleDesc);
     }
     document.getElementById('meubles').appendChild(ListOfFurniture);
 }
