@@ -11,7 +11,7 @@
 }
 
 .list-of-teddies{
-    display: flex;
+    display:flex;
 }
 
 .list-of-cam{
@@ -56,24 +56,9 @@ aside{
     margin-right: auto;
 }
 
-#ted{
-    margin-left: 17%;
-    width: 15em;
-    background-color: blueviolet;
-    border-radius: 1em;
-    border-color: blueviolet;
-    color: white;
-}
-
-#cam{
-    width: 15em;
-    background-color: blueviolet;
-    border-radius: 1em;
-    border-color: blueviolet;
-    color: white;
-}
-
-#meuble{
+button{
+    display: block;
+    margin: auto;
     width: 15em;
     background-color: blueviolet;
     border-radius: 1em;
