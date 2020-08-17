@@ -14,13 +14,13 @@ function ajaxGet(url, callback) {
     req.send(null);
 }
 
-function displayMeubles(meubles) {
+function displayMeubles(furniture) {
     console.log("affichage de la liste des meubles en chène.")
-    meubles = JSON.parse(meubles)
+    furniture = JSON.parse(furniture)
     // Création de la div "list-of-furniture"
     let ListOfFurniture = document.createElement('div')
     ListOfFurniture.setAttribute('class', 'List-of-furniture row');
-    for (let meuble of meubles){
+    for (let meuble of furniture){
         //Création de la grande div "meuble"
         let meubleDiv = document.createElement('div');
         meubleDiv.setAttribute('class', 'col-2 meuble');
@@ -49,6 +49,12 @@ function displayMeubles(meubles) {
         meubleDesc.setAttribute('class', 'description');
         meubleDesc.textContent = meuble.description;
         meubleDiv.appendChild(meubleDesc);
+
+        //Cinquième élément pour le lien
+        let meubleLink = document.createElement('a');
+        meubleLink.setAttribute('href', 'produit.html?id=' + meuble._id + '&type=furniture');
+        meubleLink.textContent = 'cliquer ici';
+        meubleDiv.appendChild(meubleLink);
     }
     document.getElementById('meubles').appendChild(ListOfFurniture);
 }
