@@ -49,6 +49,12 @@ function displayCams(cameras) {
         camDesc.setAttribute('class', 'descrip');
         camDesc.textContent = cam.description;
         camDiv.appendChild(camDesc);
+
+        //Cinquième élément pour le lien
+        let camLink = document.createElement('a');
+        camLink.setAttribute('href', 'produit.html?id=' + cam._id + '&type=cameras');
+        camLink.textContent = "cliquer ici";
+        camDiv.appendChild(camLink);
     }
     document.getElementById("cameras").appendChild(ListOfCam)
 }
