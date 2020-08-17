@@ -52,7 +52,7 @@ function displayTeddies(teddies) {
 
         //Cinquième élément pour le lien
         let teddyLink = document.createElement('a');
-        teddyLink.setAttribute('href', 'produit.html');
+        teddyLink.setAttribute('href', 'produit.html?id=' + teddy._id + '&type=teddies');
         teddyLink.textContent = "cliquer ici";
         teddyDiv.appendChild(teddyLink);
     }
