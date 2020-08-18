@@ -12,14 +12,26 @@
 
 .list-of-teddies{
     display:flex;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: space-around;
 }
 
 .list-of-cam{
     display: flex;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: space-around;
 }
 
 .List-of-furniture{
     display: flex;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: space-around;
 }
 
 .name{
@@ -36,21 +48,29 @@ img{
 }
 
 h1{
+    display: block;
+    width: 100%;
     height: 4em;
     border: 1px solid blueviolet;
     text-align: center;
     padding-top: 1.2em;
     background-color: blueviolet;
     color: white;
+    top: 0;
+    opacity: 1;
 }
 
 section{
     text-align: center;
     height: 10em;
-    padding-top: 2em;
+    margin-top: 7em;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
 }
 
 aside{
+    display: block;
     width: 80%;
     margin-left: auto;
     margin-right: auto;
@@ -64,4 +84,21 @@ button{
     border-radius: 1em;
     border-color: blueviolet;
     color: white;
+}
+
+#img1{
+    width: 10%;
+    height: 600px;
+    position: fixed;
+}
+
+#img2{
+    width: 10%;
+    height: 600px;
+    position: fixed;
+    right: 0;
+}
+
+#conteneur2{
+    display: flex;
 }
