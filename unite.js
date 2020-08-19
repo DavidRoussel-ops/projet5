@@ -32,27 +32,21 @@ function displayObject(object) {
         objectNameDiv.textContent = object.name;
         objectDiv.appendChild(objectNameDiv);
 
-        //Deuxième div pour le prix
-        let objectPriceDiv = document.createElement('div');
-        objectPriceDiv.setAttribute('class', 'price');
-        objectPriceDiv.textContent = object.price;
-        objectDiv.appendChild(objectPriceDiv);
-
-        //Troisième élement de type img pour l'image
+        //Deuxième élement de type img pour l'image
         let objectPicture = document.createElement('img');
         objectPicture.setAttribute('src', object.imageUrl);
         objectDiv.appendChild(objectPicture);
 
-        //Quatrième div pour la description
+        //Troisième div pour la description
         let objectDesc = document.createElement('div');
         objectDesc.setAttribute('class', 'descrip');
         objectDesc.textContent = object.description;
         objectDiv.appendChild(objectDesc);
 
-        //Cinquième élément pour le lien
-        let objectLink = document.createElement('a');
-        objectLink.setAttribute('href', 'produit.html');
-        objectLink.textContent = "cliquer ici";
-        objectDiv.appendChild(objectLink);
+        //Quatrième div pour le prix
+        let objectPriceDiv = document.createElement('div');
+        objectPriceDiv.setAttribute('class', 'price');
+        objectPriceDiv.textContent = object.price + '€';
+        objectDiv.appendChild(objectPriceDiv);
 
 }
