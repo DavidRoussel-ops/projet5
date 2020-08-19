@@ -48,5 +48,16 @@ function displayObject(object) {
         objectPriceDiv.setAttribute('class', 'price');
         objectPriceDiv.textContent = object.price + '€';
         objectDiv.appendChild(objectPriceDiv);
-
+        
+        //Cinquième div pour les couleurs
+        let objectColorDiv = document.createElement('div');
+        let objectColorInput = document.createElement('input');
+        let objectColorSelect = document.createElement('select');
+        let objectColorLabel = document.createElement('label');
+        objectColorLabel.textContent = 'Selection couleur';
+        objectColorSelect.appendChild(objectColorLabel);
+        objectColorInput.appendChild(objectColorSelect);
+        objectColorDiv.appendChild(objectColorInput);
+        objectDiv.appendChild(objectColorDiv);
+        
 }
