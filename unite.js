@@ -50,14 +50,34 @@ function displayObject(object) {
         objectDiv.appendChild(objectPriceDiv);
         
         //Cinquième div pour les couleurs
-        let objectColorDiv = document.createElement('div');
-        let objectColorInput = document.createElement('input');
+        /*let objectColorDiv = document.createElement('div');
+        //let objectColorInput = document.createElement('input');
         let objectColorSelect = document.createElement('select');
-        let objectColorLabel = document.createElement('label');
+        let objectColorLabel = document.createElement('legend');
+        //let objectColorOption = document.createElement('option');
+        //objectColorOption.textContent = object.colors.length;
         objectColorLabel.textContent = 'Selection couleur';
+        //objectColorLabel.appendChild(objectColorOption);
         objectColorSelect.appendChild(objectColorLabel);
         objectColorInput.appendChild(objectColorSelect);
         objectColorDiv.appendChild(objectColorInput);
         objectDiv.appendChild(objectColorDiv);
-        
+
+        let objectColorArray = [object.color];
+
+        for (let [i] = 0; i < objectColorArray.length; i++){
+            console.log(objectColorArray[i]);
+    }*/
+    let objectColorDiv = document.createElement('div');
+    let objectColorSelect = document.createElement('select');
+    let objectColorOption = document.createElement('option');
+    objectColorOption.innerHTML = object.colors;
+    /*objectColorOption = [object.colors];
+    for(let i= 0; i < objectColorOption.length; i++)
+    {
+        document.createElement('option');
+    }*/
+    objectColorSelect.appendChild(objectColorOption);
+    objectColorDiv.appendChild(objectColorSelect);
+    objectDiv.appendChild(objectColorDiv);
 }
