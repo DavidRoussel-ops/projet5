@@ -66,3 +66,16 @@ document.addEventListener("DOMContentLoaded", function (event) {
     ajaxGet("http://localhost:3000/api/" + type + "/" + objectId, displayObject);
 
 })
+
+/*window.addEventListener('DOMContentLoaded', function(){
+    let optionSelect = document.getElementById('container');
+    let colors = [object.color];
+    let combo = document.createElement('select');
+    while(colors.length)
+    {
+        let couleur = colors.pop();
+        let opt = new Option(couleur, couleur);
+        combo.options[combo.options.length] = opt;
+    }
+    optionSelect.appendChild(combo);
+});*/
