@@ -49,6 +49,40 @@ function displayObject(object) {
     objectPriceDiv.textContent = object.price + '€';
     objectDiv.appendChild(objectPriceDiv);
 
+
+    let objectColorDiv = document.createElement('div');
+    let objectColorSelect = document.createElement('select');
+    let objectColorOpt = document.createElement('option');
+    let colorSelect = object.colors;
+    for(let i= 0; i < colorSelect.length; i++)
+    {
+        colorSelect = document.createElement('option');
+        colorSelect.innerHTML = object.colors;
+    }
+
+    /*let colorOpt = object.colors.pop();
+    let opt = new Option(colorOpt, colorOpt);*/
+    //objectColorSelect.options[objectColorSelect.options.length] = new Option(object.colors);
+    objectColorOpt.appendChild(colorSelect);
+    objectColorSelect.appendChild(objectColorOpt);
+    objectColorDiv.appendChild(objectColorSelect);
+    objectDiv.appendChild(objectColorDiv);
+}
+    /*window.addEventListener('DOMContentLoaded', function () {
+        let form = document.getElementById('objectColorDiv');
+        let colors = object.colors;
+        let combo = document.createElement('select');
+        while (colors.length){
+            let couleur = colors.pop();
+            let opt = new Option(couleur, couleur);
+            combo.options[combo.options.length] = opt;
+        }
+        form.appendChild(combo);
+    });
+
+    objectDiv.appendChild(objectColorDiv);
+}
+
     //Cinquième div pour les couleurs
     /*let objectColorDiv = document.createElement('div');
     //let objectColorInput = document.createElement('input');
@@ -65,19 +99,30 @@ function displayObject(object) {
 
     let objectColorArray = [object.color];*/
 
-    /*for (let [i] = 0; i < object.colors.length; i++){
+
+    /*for (let [i] = 0; i < objectColorOption; i++){
 
 }*/
-    let objectColorDiv = document.createElement('div');
+
+    /*let objectColorInput = document.createElement('input');
+    let objectColorLabel = document.createElement('label');
     let objectColorSelect = document.createElement('select');
     let objectColorOption = document.createElement('option');
     objectColorOption.innerHTML = object.colors;
-    /*objectColorOption = [object.colors];
-    for(let i= 0; i < objectColorOption.length; i++)
-    {
-        document.createElement('option');
-    }*/
-    objectColorSelect.appendChild(objectColorOption);
-    objectColorDiv.appendChild(objectColorSelect);
-    objectDiv.appendChild(objectColorDiv);
-}
+    objectColorLabel.textContent = 'liste de couleurs'
+    //objectColorOption = [object.colors];
+
+    /*let select = document.getElementById('select');
+    let option = object.colors;
+
+    options.forEach(function (object, colors) {
+        select[colors] = new option;
+    });*/
+    /*objectColorSelect.appendChild(objectColorOption);
+    objectColorLabel.appendChild(objectColorSelect);
+    objectColorInput.appendChild(objectColorLabel);
+    objectColorDiv.appendChild(objectColorInput);
+
+}*/
+
+
