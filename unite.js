@@ -49,24 +49,31 @@ function displayObject(object) {
     objectPriceDiv.textContent = object.price + '€';
     objectDiv.appendChild(objectPriceDiv);
 
-
-    let objectColorDiv = document.createElement('div');
-    let objectColorSelect = document.createElement('select');
-    let objectColorOpt = document.createElement('option');
-    let colorSelect = object.colors;
-    for(let i= 0; i < colorSelect.length; i++)
+    let objectElementDiv, objectSelect;
+    objectElementDiv = document.createElement('div');
+    objectSelect = document.createElement('select');
+    let colorOpt = document.createElement('option');
+    colorOpt.innerHTML = object.colors;
+    let lensesOpt = document.createElement('option');
+    lensesOpt.innerHTML = object.lenses;
+    let varnishOpt = document.createElement('option');
+    varnishOpt.innerHTML = object.varnish;
+    for(let i= 0; i < colorOpt; i++)
     {
-        colorSelect = document.createElement('option');
-        colorSelect.innerHTML = object.colors;
+        colorOpt.textContent = object.colors[i];
+        lensesOpt.textContent = object.lenses[i];
+        varnishOpt.textContent = object.varnish[i];
     }
 
     /*let colorOpt = object.colors.pop();
     let opt = new Option(colorOpt, colorOpt);*/
     //objectColorSelect.options[objectColorSelect.options.length] = new Option(object.colors);
-    objectColorOpt.appendChild(colorSelect);
-    objectColorSelect.appendChild(objectColorOpt);
-    objectColorDiv.appendChild(objectColorSelect);
-    objectDiv.appendChild(objectColorDiv);
+    //objectColorOpt.appendChild(colorSelect);*
+    objectSelect.appendChild(varnishOpt);
+    objectSelect.appendChild(lensesOpt);
+    objectSelect.appendChild(colorOpt);
+    objectElementDiv.appendChild(objectSelect);
+    objectDiv.appendChild(objectElementDiv);
 }
     /*window.addEventListener('DOMContentLoaded', function () {
         let form = document.getElementById('objectColorDiv');
@@ -95,9 +102,9 @@ function displayObject(object) {
     objectColorSelect.appendChild(objectColorLabel);
     objectColorInput.appendChild(objectColorSelect);
     objectColorDiv.appendChild(objectColorInput);
-    objectDiv.appendChild(objectColorDiv);
+    objectDiv.appendChild(objectColorDiv);*/
 
-    let objectColorArray = [object.color];*/
+    //let objectColorArray = [object.color];
 
 
     /*for (let [i] = 0; i < objectColorOption; i++){
