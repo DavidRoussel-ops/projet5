@@ -49,31 +49,62 @@ function displayObject(object) {
     objectPriceDiv.textContent = object.price + '€';
     objectDiv.appendChild(objectPriceDiv);
 
-    let objectElementDiv, objectSelect;
+    //let select = document.getElementById('option');
+
+    //option.appendChild(select);
+
+    let objectSlt = document.createElement('select')
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    let type = urlParams.get('type');
+    if (type === 'teddies') {
+        object.colors.forEach(function (color) {
+            let objectOpt = document.createElement('option');
+            objectOpt.textContent = color;
+            objectSlt.appendChild(objectOpt);
+        })
+    }else if (type === 'cameras'){
+        object.lenses.forEach(function (lentille) {
+            let objectOpt =document.createElement('option');
+            objectOpt.textContent = lentille;
+            objectSlt.appendChild(objectOpt);
+        })
+    }else if (type === 'furniture'){
+        object.varnish.forEach(function (vernis) {
+            let objectOpt = document.createElement('option');
+            objectOpt.textContent = vernis;
+            objectSlt.appendChild(objectOpt);
+        })
+    }
+    objectDiv.appendChild(objectSlt);
+
+    /*let objectElementDiv, objectSelect;
     objectElementDiv = document.createElement('div');
     objectSelect = document.createElement('select');
-    let colorOpt = document.createElement('option');
-    colorOpt.innerHTML = object.colors;
-    let lensesOpt = document.createElement('option');
+    objectSelect.setAttribute('id', 'option');*/
+    /*const objectOpt = document.createElement('option');
+    objectOpt.innerHTML = object.colors;
+    const lensesOpt = document.createElement('option');
     lensesOpt.innerHTML = object.lenses;
-    let varnishOpt = document.createElement('option');
-    varnishOpt.innerHTML = object.varnish;
-    for(let i= 0; i < colorOpt; i++)
+    const varnishOpt = document.createElement('option');
+    varnishOpt.innerHTML = object.varnish;*/
+    /*for (let i= 0; i < colorOpt; i++)
     {
-        colorOpt.textContent = object.colors[i];
-        lensesOpt.textContent = object.lenses[i];
-        varnishOpt.textContent = object.varnish[i];
-    }
+        //colorOpt.innerHTML = object.colors[i], object.lenses[i], object.varnish[i];
+        colorOpt = new Option(object.colors, object.lenses, object.varnish);
+        //lensesOpt.textContent = object.lenses[i];
+        //varnishOpt.textContent = object.varnish[i];
+    }*/
 
     /*let colorOpt = object.colors.pop();
     let opt = new Option(colorOpt, colorOpt);*/
     //objectColorSelect.options[objectColorSelect.options.length] = new Option(object.colors);
     //objectColorOpt.appendChild(colorSelect);*
-    objectSelect.appendChild(varnishOpt);
+    /*objectSelect.appendChild(varnishOpt);
     objectSelect.appendChild(lensesOpt);
-    objectSelect.appendChild(colorOpt);
-    objectElementDiv.appendChild(objectSelect);
-    objectDiv.appendChild(objectElementDiv);
+    objectSelect.appendChild(objectOpt);*/
+    /*objectElementDiv.appendChild(objectSelect);
+    objectDiv.appendChild(objectElementDiv);*/
 }
     /*window.addEventListener('DOMContentLoaded', function () {
         let form = document.getElementById('objectColorDiv');
