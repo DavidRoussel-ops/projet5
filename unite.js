@@ -30,24 +30,24 @@ function displayObject(object) {
     let objectNameDiv = document.createElement('div');
     objectNameDiv.setAttribute('class', 'name');
     objectNameDiv.textContent = object.name;
-    objectDiv.appendChild(objectNameDiv);
+    document.getElementById('name').appendChild(objectNameDiv);
 
     //Deuxième élement de type img pour l'image
     let objectPicture = document.createElement('img');
     objectPicture.setAttribute('src', object.imageUrl);
-    objectDiv.appendChild(objectPicture);
+    document.getElementById('picture').appendChild(objectPicture);
 
     //Troisième div pour la description
     let objectDesc = document.createElement('div');
     objectDesc.setAttribute('class', 'descrip');
     objectDesc.textContent = object.description;
-    objectDiv.appendChild(objectDesc);
+    document.getElementById('description').appendChild(objectDesc);
 
     //Quatrième div pour le prix
     let objectPriceDiv = document.createElement('div');
     objectPriceDiv.setAttribute('class', 'price');
     objectPriceDiv.textContent = object.price + '€';
-    objectDiv.appendChild(objectPriceDiv);
+    document.getElementById('price').appendChild(objectPriceDiv);
 
     //let select = document.getElementById('option');
 
@@ -76,7 +76,7 @@ function displayObject(object) {
             objectSlt.appendChild(objectOpt);
         })
     }
-    objectDiv.appendChild(objectSlt);
+    document.getElementById('choice').appendChild(objectSlt);
 
     let objectStorage = document.createElement('button');
     objectStorage.textContent = 'ajouter au panier';
