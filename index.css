@@ -1,3 +1,6 @@
+#conteneur{
+    font-family: 'Londrina Solid', cursive;
+}
 #teddies{
     display: none;
 }
@@ -42,22 +45,52 @@
     color: darkblue;
 }
 
+header{
+    background-color: blueviolet;
+    border: 1px solid blueviolet;
+    height: 10em;
+    width: 100%;
+    margin-bottom: 10em;
+}
+
+nav{
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 50px 60px 0 60px;
+}
+
+nav li{
+    list-style: none;
+    display: inline-block;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+nav li span{
+    padding-left: 5px;
+}
+
+li a{
+    padding: 5px;
+    background-color: #fff;
+    text-decoration: none;
+}
+
+.cart a{
+    background-color: royalblue;
+    color: #fff;
+    cursor: pointer;
+    text-decoration: none;
+}
+
 img{
     width: 120px;
     height: 100px;
-}
-
-h1{
-    display: block;
-    width: 100%;
-    height: 4em;
-    border: 1px solid blueviolet;
-    text-align: center;
-    padding-top: 1.2em;
-    background-color: blueviolet;
-    color: white;
-    top: 0;
-    opacity: 1;
 }
 
 section{
@@ -86,19 +119,6 @@ button{
     color: white;
 }
 
-#img1{
-    width: 10%;
-    height: 600px;
-    position: fixed;
-}
-
-#img2{
-    width: 10%;
-    height: 600px;
-    position: fixed;
-    right: 0;
-}
-
-#conteneur2{
-    display: flex;
+a {
+    display: block;
 }
