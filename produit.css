@@ -1,3 +1,7 @@
+body{
+    font-family: 'Londrina Solid', cursive;
+}
+
 #container{
     width: 80%;
     margin-left: auto;
@@ -21,6 +25,7 @@ nav{
     flex-wrap: wrap;
     justify-content: space-between;
     padding: 50px 60px 0 60px;
+    font-family: 'Londrina Solid', cursive;
 }
 
 nav li{
