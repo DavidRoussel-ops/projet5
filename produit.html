@@ -2,23 +2,28 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="produit.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@300&display=swap" rel="stylesheet">
     <title>Page produit</title>
 </head>
 <body>
+<header>
+    <nav>
+        <h1>Shop</h1>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li class="cart">
+                <a href="panier.html">
+                    <ion-icon name="cart-outline"></ion-icon>Panier<span>0</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
     <div id="container">
+        <h2 id="name">
 
-        <div class="dropdown">
-            <div id="cart">
-                <p><span id="in-cart-items-num">0</span> Articles</p>
-            </div>
-         <ul id="cart-dropdown" hidden>
-             <li id="empty-cart-msg"><a>Votre panier est vide</a></li>
-             <li class="go-to-cart-hidden"><a href="future page panier">Voir le panier</a></li>
-         </ul>
-        </div>
-        <h1 id="name">
-
-        </h1>
+        </h2>
         <div id="picture">
 
         </div>
@@ -32,7 +37,8 @@
 
         </div>
     </div>
-    <script src="unite.js"></script>
+<script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
+<script src="unite.js"></script>
 <script src="produit.js"></script>
 <script src="panier.js"></script>
 </body>
