@@ -1,28 +1,11 @@
-let panier = localStorage;
-localStorage.setItem('teddies', 'arnold');
-panier.localStorage.getItem('teddies');
-JSON.parse(panier.localStorage.getItem('teddies'));
+let carts = document.querySelectorAll('.add-cart');
 
-//petite fonctionalité de l'icone panier
+for (let i=0; i < carts.length; i++){
+    carts[i].addEventListener('click', () => {
+        cartNumbers();
+    })
+}
 
-let timeout;
-
-$('#cart').on({
-    mouseenter: function () {
-        $('#cart-dropdown').show();
-    },
-    mouseleave: function () {
-        timeout = setTimeout(function () {
-            $('#cart-dropdown').hide()
-        }, 200)
-    }
-});
-
-$('#cart-dropdown').on({
-    mouseenter: function () {
-        clearTimeout(timeout);
-    },
-    mouseleave: function () {
-        $('#cart-dropdown').hide();
-    }
-});
+function cartNumbers() {
+    localStorage.setItem('cartNumbers', 1);
+}
