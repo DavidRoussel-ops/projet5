@@ -4,22 +4,26 @@
     <title>.</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width = device-width, initial-scale = 1">
+    <link href="https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" href="index.css" type="text/css">
 </head>
 <body>
 <div id="conteneur">
     <header>
-        <h1>ORINOCO</h1>
+        <nav>
+            <h1>ORINOCO</h1>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li class="cart">
+                    <a href="panier.html">
+                        <ion-icon name="cart-outline"></ion-icon>Panier<span>0</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
     </header>
-    <div id="conteneur2">
-    <img src="bandeau.jpg" alt="bandeau" id="img1">
-    <section>
-        <h2>Bienvenue!</h2>
-        <p>Retrouver ci-dessous tout notre selection des meilleurs ours en peluche, appareil photo et meuble.</p>
-    </section>
-    <img src="bandeau.jpg" alt="bandeau" id="img2">
-    </div>
     <aside>
         <button id="ted">TEDDY</button>
         <div id="teddies"></div>
@@ -31,6 +35,8 @@
     <footer>
     </footer>
 </div>
+<script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
+<script src="panier.js"></script>
 <script src="button.js"></script>
 <script src="ajax.js"></script>
 <script src="camera.js"></script>
