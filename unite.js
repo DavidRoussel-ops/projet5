@@ -78,11 +78,6 @@ function displayObject(object) {
     }
     document.getElementById('choice').appendChild(objectSlt);
 
-    let objectStorage = document.createElement('button');
-    objectStorage.textContent = 'ajouter au panier';
-    objectStorage.setAttribute('a', '#');
-    objectDiv.appendChild(objectStorage);
-
     /*let objectElementDiv, objectSelect;
     objectElementDiv = document.createElement('div');
     objectSelect = document.createElement('select');
