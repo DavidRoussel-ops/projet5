@@ -78,6 +78,13 @@ function displayObject(object) {
     }
     document.getElementById('choice').appendChild(objectSlt);
 
+    let objectCart = document.createElement('a');
+    objectCart.setAttribute('class', 'add-cart');
+    objectCart.setAttribute('href', '#');
+    objectCart.textContent = 'ajouter au panier';
+    document.getElementById('cart').appendChild(objectCart);
+
+
     /*let objectElementDiv, objectSelect;
     objectElementDiv = document.createElement('div');
     objectSelect = document.createElement('select');

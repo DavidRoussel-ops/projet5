@@ -1,8 +1,7 @@
 //Création d'une variable récupérant l'élément possédant la classe "add-cart"
 let carts = document.querySelectorAll('.add-cart');
 
-let products = [
-    {"colors":["Tan","Chocolate","Black","White"],"_id":"5be9c8541c9d440000665243","name":"Norbert","price":2900,"imageUrl":"http://localhost:3000/images/teddy_1.jpg","description":"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.","inCart":0},
+let products = [{"colors":["Tan","Chocolate","Black","White"],"_id":"5be9c8541c9d440000665243","name":"Norbert","price":2900,"imageUrl":"http://localhost:3000/images/teddy_1.jpg","description":"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.","inCart":0},
     {"colors":["Pale brown","Dark brown","White"],"_id":"5beaa8bf1c9d440000a57d94","name":"Arnold","price":3900,"imageUrl":"http://localhost:3000/images/teddy_2.jpg","description":"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.","inCart":0},
     {"colors":["Brown"],"_id":"5beaaa8f1c9d440000a57d95","name":"Lenny and Carl","price":5900,"description":"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.","imageUrl":"http://localhost:3000/images/teddy_3.jpg","inCart":0},
     {"colors":["Brown","Blue","Pink"],"_id":"5beaabe91c9d440000a57d96","name":"Gustav","price":4500,"imageUrl":"http://localhost:3000/images/teddy_4.jpg","description":"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.","inCart":0},
@@ -36,6 +35,7 @@ function onLoadCartNumbers() {
 
 // fonction donnant une clés et une valeur au local storage
 function cartNumbers(product) {
+    console.log('le produit selectionner est', product);
     let productNumbers = localStorage.getItem('cartNumbers');
     productNumbers = parseInt(productNumbers);
     if (productNumbers){
@@ -53,10 +53,19 @@ function cartNumbers(product) {
 function setItems(product) {
     let cartItems = localStorage.getItem('productsInCart');
     cartItems = JSON.parse(cartItems);
-    console.log('mon item carte est', cartItems);
-    product.inCart = 1;
-    cartItems = {
-        [product._id]: product
+    if(cartItems != null){
+        if (cartItems[product._id] === undefined){
+            cartItems = {
+                ...cartItems,
+                [product._id]: product
+            }
+        }
+        cartItems[product._id].inCart += 1;
+    }else {
+        product.inCart = 1;
+        cartItems = {
+            [product._id]: product
+        }
     }
 
     localStorage.setItem('productsInCart', JSON.stringify
