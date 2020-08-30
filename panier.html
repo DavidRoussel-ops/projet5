@@ -32,7 +32,31 @@
 
         </div>
     </div>
-
+    <form action="/server.js" method="post">
+        <div>
+            <label for="surname">Nom :</label>
+            <input type="text" id="surname" name="user_name">
+        </div>
+        <div>
+            <label for="name">Prénom :</label>
+            <input type="text" id="name" name="user_name">
+        </div>
+        <div>
+            <label for="phone">Téléphone :</label>
+            <input type="number" id="phone" name="user_phone">
+        </div>
+        <div>
+            <label for="mail">e-mail :</label>
+            <input type="email" id="mail" name="user_mail">
+        </div>
+        <div>
+            <label for="msg">Message :</label>
+            <textarea id="msg" name="user_message"></textarea>
+        </div>
+    </form>
+    <div class="button">
+        <button type="submit"><a href="formulaire.html">Valider</a></button>
+    </div>
     <script src="panier.js"></script>
     <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
 </body>
