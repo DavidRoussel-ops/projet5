@@ -67,6 +67,36 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
 })
 
+
+
+//Création d'une variable récupérant l'élément possédant la classe "add-cart"
+/*let carts = document.querySelectorAll('.add-cart');
+
+//boucle récupérant le nombre de click
+for (let i=0; i < carts.length; i++){
+    carts[i].addEventListener('click', () => {
+        cartNumbers(objectId[i]);
+        //totalCost(products[i]);
+    })
+}
+
+// fonction donnant une clés et une valeur au local storage
+function cartNumbers(object) {
+    console.log('le produit selectionner est', product);
+    let productNumbers = localStorage.getItem('cartNumbers');
+    productNumbers = parseInt(productNumbers);
+
+    if (productNumbers){
+        localStorage.setItem('cartNumbers', productNumbers + 1);
+        document.querySelector('.cart span').textContent = productNumbers + 1;
+    }else {
+        localStorage.setItem('cartNumbers', 1);
+        document.querySelector('.cart span').textContent = 1;
+
+    }
+    setItems(product);
+}*/
+
 /*window.addEventListener('DOMContentLoaded', function(){
     let optionSelect = document.getElementById('container');
     let colors = [object.color];
