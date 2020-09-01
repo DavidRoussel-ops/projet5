@@ -82,47 +82,66 @@ function totalCost(product) {
     }
 }
 
-let products = localStorage.getItem('itemInCart');
+/*let myBascket = document.getElementById('cart');
+
+if (myBascket != null){
+    myBascket.addEventListener("click", bascket);
+}
+
+function bascket() {
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    let objectId = urlParams.get('id');
+    let type = urlParams.get('type');
+    console.log("je cherche" + objectId + 'de type' + type);
+    ajaxGet("http://localhost:3000/api/" + type + "/" + objectId, displayCart);
+}*/
+
+let products = localStorage.getItem('productsInCart');
 
 displayCart(products);
 
 function displayCart(products) {
 
-    let container = document.getElementById('cart');
-
-    products.forEach(function (product) {
-        let subContainer = document.createElement('one-item');
-
-        let removeItem = document.createElement('div');
-        removeItem.setAttribute('class', 'remove-item');
-        removeItem.innerHTML = 'X';
-        removeItem.addEventListener('click', function () {
-            let items = localStorage.getItem('itemInCart');
-            items = JSON.parse(items);
-            items.forEach(function (item, index) {
-                if (item._id === product._id){
-                    items.splice(index, 1)
-                }
+    let container = document.createElement('div');
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    let productId = urlParams.get('id');
+    if (productId === products) {
+        products.forEach(function (product) {
+            let subContainer = document.createElement('one-item');
+            let removeItem = document.createElement('div');
+            removeItem.setAttribute('class', 'remove-item');
+            removeItem.innerHTML = 'X';
+            removeItem.addEventListener('click', function () {
+                let items = localStorage.getItem('productsInCart');
+                items = JSON.parse(items);
+                items.forEach(function (item, index) {
+                    if (item._id === product._id) {
+                        items.splice(index, 1)
+                    }
+                });
+                localStorage.setItem('productsInCart', JSON.stringify(items));
+                container.innerHTML = '';
+                displayCart(items)
             });
-            localStorage.setItem('itemInCart', JSON.stringify(items));
-            container.innerHTML = '';
-            displayCart(items)
-        });
 
-        let nameItem = document.createElement('div');
-        nameItem.setAttribute('class', 'name');
-        nameItem.innerHTML = "Nom : " + product.name;
+            let nameItem = document.createElement('div');
+            nameItem.setAttribute('class', 'name');
+            nameItem.innerHTML = "Nom : " + product.name;
+            document.getElementById('product-title').appendChild(nameItem);
 
-        let priceItem = document.createElement('div');
-        priceItem.setAttribute('class', 'price');
-        priceItem.innerHTML = "Prix : " + product.price;
+            let priceItem = document.createElement('div');
+            priceItem.setAttribute('class', 'price');
+            priceItem.innerHTML = "Prix : " + product.price;
+            document.getElementById('product-price').appendChild(priceItem);
 
-        subContainer.appendChild(removeItem);
-        subContainer.appendChild(nameItem);
-        subContainer.appendChild(priceItem);
-
-        container.appendChild(subContainer);
-    })
+            subContainer.appendChild(removeItem);
+            /*subContainer.appendChild(nameItem);
+            subContainer.appendChild(priceItem);*/
+            container.appendChild(subContainer);
+            document.getElementById('productBasket').appendChild(container);
+        })
+    }
 }
-
 onLoadCartNumbers();
