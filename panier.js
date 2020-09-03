@@ -82,6 +82,10 @@ function totalCost(product) {
     }
 }
 
+let objectLinea = localStorage.getItem("productsInCart");
+objectLinea = JSON.parse(objectLinea);
+alert(objectLinea.name);
+
 /*let myBascket = document.getElementById('cart');
 
 if (myBascket != null){
@@ -144,7 +148,7 @@ function displayCart(products) {
         })
     }
 }*/
-
+/*
 function lignePanier(code, qte, prix) {
     let product = JSON.parse(product);
     this.codeArticle = localStorage.getItem('productsInCart', product.name);
@@ -259,6 +263,6 @@ function supprimer(code)
     }
     document.getElementById("prixTotal").innerHTML = monPanier.getPrixPanier();
     document.getElementById("nbreLignes").innerHTML = longueur;
-}
+}*/
 
 onLoadCartNumbers();
