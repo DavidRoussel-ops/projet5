@@ -17,7 +17,6 @@ function addCart(product) {
     product = JSON.parse(product);
     cartNumbers(product);
     totalCost(product);
-    caddy(product);
 }
 
 
@@ -83,10 +82,13 @@ function totalCost(product) {
     }
 }
 
-alert("contenu du localstorage =" +localStorage.getItem('productsInCart'));
 
-let nameItem = document.getElementById('product-title');
-nameItem.innerHTML = 'Nom : ' + localStorage.getItem('productsInCart' + name);
+
+
+//alert("contenu du localstorage =" +localStorage.getItem('productsInCart'));
+
+//let nameItem = document.getElementById('product-title');
+//nameItem.innerHTML = 'Nom : ' + localStorage.getItem('productsInCart' + name);
 /*function caddy(product) {
 
     let objCart = localStorage.getItem("productsInCart");
@@ -128,20 +130,19 @@ function bascket() {
     console.log("je cherche" + objectId + 'de type' + type);
     ajaxGet("http://localhost:3000/api/" + type + "/" + objectId, displayCart);
 }*/
-/*
-let products = localStorage.getItem('productsInCart');
+
+
+
+/*let products = localStorage.getItem('productsInCart');
 
 displayCart(products);
 
 function displayCart(products) {
 
     let container = document.createElement('div');
-    const queryString = window.location.search;
-    const urlParams = new URLSearchParams(queryString);
-    let productId = urlParams.get('id');
-    if (productId === products) {
-        products.forEach(function (product) {
-            let subContainer = document.createElement('one-item');
+
+        products.forEach(function(product){
+            let subContainer = document.createElement('div');
             let removeItem = document.createElement('div');
             removeItem.setAttribute('class', 'remove-item');
             removeItem.innerHTML = 'X';
@@ -173,9 +174,10 @@ function displayCart(products) {
             subContainer.appendChild(priceItem);
             container.appendChild(subContainer);
             document.getElementById('productBasket').appendChild(container);
-        })
-    }
+
+})
 }*/
+
 /*
 function lignePanier(code, qte, prix) {
     let product = JSON.parse(product);
