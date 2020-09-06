@@ -14,7 +14,7 @@ function ajaxGet(url, callback) {
     req.send(null);
 }
 
-function displayTeddies(teddies) {
+function displayTeddies(teddies){
     console.log("Affichage de la liste de teddies.")
     teddies = JSON.parse(teddies)
     //Création de la div "list-of-teddies"

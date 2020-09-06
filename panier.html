@@ -21,39 +21,14 @@
             </ul>
         </nav>
     </header>
-    <!--<section  class="container">
-        <article class="well form-inline pull-left col-lg-5">
-            <legend>Gestion du panier</legend>
-            <label class="col-lg-3" id="id">Identifiant</label> : <br><br>
-            <label class="col-lg-3" id="qte">Quantité</label> : <br><br>
-            <label class="col-lg-3" id="prix">Prix</label> : <br><br>
-            <button class="btn btn-primary" type="submit" onclick="ajouter()"><span class="glyphicon glyphicon-shopping-cart"></span> Ajouter au panier</button>
-        </article>
-    </section>
-    <section class="container">
-        <article class="well form-inline pull-left col-lg-5">
-            <legend>Contenu du panier</legend>
-            <table id="tableau" class="table">
-                <thead>
-                <tr>
-                    <th>Code</th>
-                    <th>Qte</th>
-                    <th>Prix unitaire</th>
-                    <th>Prix de la ligne</th>
-                    <th>Supprimer</th>
-                </tr>
-                </thead>
-            </table>
-            <br><label>Prix du panier total</label> : <label id = "prixTotal"></label>
-            <label id = "nbreLignes" hidden>0</label>
-        </article>
-    </section>-->
+    <div id="container">
     <div id="products-container">
         <div id="product-header">
+            <h5 id="remove">SUPPRIMER</h5>
             <h5 id="product-title">PRODUIT</h5>
+            <h5 id="product-picture">IMAGE</h5>
             <h5 id="product-price">PRIX</h5>
             <h5 id="quantity">QUANTITER</h5>
-            <h5 id="total">TOTAL</h5>
         </div>
         <div id="productBasket">
 
@@ -83,6 +58,7 @@
     </form>
     <div class="button">
         <button type="submit"><a href="formulaire.html">Valider</a></button>
+    </div>
     </div>
     <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
     <script src="panier.js"></script>

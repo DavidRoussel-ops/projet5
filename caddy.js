@@ -25,7 +25,7 @@
 
         let newCaddyName = document.createElement('div');
         newCaddyName.setAttribute('class', 'caddy-name');
-        newCaddyName.textContent = 'Nom : ' + value.name;
+        newCaddyName.textContent = value.name;
         newCaddy.appendChild(newCaddyName);
 
         let newCaddyImg = document.createElement('img');
@@ -34,17 +34,17 @@
 
         let newCaddyPrice = document.createElement('div');
         newCaddyImg.setAttribute('class', 'caddy-price');
-        newCaddyPrice.textContent = 'Prix ' + value.price + '€';
+        newCaddyPrice.textContent = value.price;
         newCaddy.appendChild(newCaddyPrice);
 
-        let newCaddyDesc = document.createElement('div');
+        /*let newCaddyDesc = document.createElement('div');
         newCaddyDesc.setAttribute('class', 'caddy-desc');
         newCaddyDesc.textContent = 'Description : ' + value.description;
-        newCaddy.appendChild(newCaddyDesc);
+        newCaddy.appendChild(newCaddyDesc);*/
 
         let newCaddyInCart = document.createElement('div');
         newCaddyInCart.setAttribute('class', 'caddy-incart');
-        newCaddyInCart.textContent = 'Quantité : ' + value.inCart;
+        newCaddyInCart.textContent = value.inCart;
         newCaddy.appendChild(newCaddyInCart);
     }
 
