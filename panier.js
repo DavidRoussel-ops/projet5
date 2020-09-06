@@ -141,33 +141,31 @@ function displayCart(products) {
 
     let container = document.createElement('div');
 
-        products.forEach(function(product){
+        function itemCaddy(product){
             let subContainer = document.createElement('div');
             let removeItem = document.createElement('div');
-            removeItem.setAttribute('class', 'remove-item');
+
+            });removeItem.setAttribute('class', 'remove-item');
             removeItem.innerHTML = 'X';
             removeItem.addEventListener('click', function () {
                 let items = localStorage.getItem('productsInCart');
                 items = JSON.parse(items);
-                items.forEach(function (item, index) {
+                function item(item, index) {
                     if (item._id === product._id) {
                         items.splice(index, 1)
                     }
-                });
+                }
                 localStorage.setItem('productsInCart', JSON.stringify(items));
                 container.innerHTML = '';
-                displayCart(items)
-            });
+                displayCart(products)
 
             let nameItem = document.createElement('div');
             nameItem.setAttribute('class', 'name');
             nameItem.innerHTML = "Nom : " + product.name;
-            document.getElementById('product-title').appendChild(nameItem);
 
             let priceItem = document.createElement('div');
             priceItem.setAttribute('class', 'price');
             priceItem.innerHTML = "Prix : " + product.price;
-            document.getElementById('product-price').appendChild(priceItem);
 
             subContainer.appendChild(removeItem);
             subContainer.appendChild(nameItem);
@@ -175,7 +173,7 @@ function displayCart(products) {
             container.appendChild(subContainer);
             document.getElementById('productBasket').appendChild(container);
 
-})
+}
 }*/
 
 /*
