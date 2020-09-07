@@ -20,6 +20,14 @@ body{
     padding-right: 2.5em;
 }
 
+#place2{
+    display: block;
+}
+
+#place3{
+    display: block;
+}
+
 header{
     height: 10em;
     width: 100%;
@@ -68,9 +76,7 @@ img{
 
 .descrip{
     color: darkblue;
-    width: 10em;
     height: auto;
-    margin-left: 2em;
     font-size: 1.5em;
 }
 
@@ -98,11 +104,27 @@ img{
 }
 
 #picture{
-    display: flex;
     width: 20em;
 }
 
 #description{
-    display: flex;
     width: 20em;
+    text-align: center;
+    border: 1px solid black;
+}
+
+#price{
+    text-align: center;
+    border: 1px solid black;
+}
+
+#choice{
+    display: flex;
+    width: 50%;
+}
+
+#cart{
+    display: flex;
+    justify-content: flex-end;
+    width: 50%;
 }

@@ -1,6 +1,7 @@
 
     let listOfItems = localStorage.getItem("productsInCart");
     listOfItems = JSON.parse(listOfItems);
+    let total = 0;
     for (const [key,value] of Object.entries(listOfItems)){
         console.log(value.name);
         let newCaddy = document.createElement('div');
@@ -9,7 +10,7 @@
 
         let removeCaddy = document.createElement('div');
         removeCaddy.setAttribute('class', 'remove-item');
-        removeCaddy.innerHTML = 'X';
+        removeCaddy.innerHTML = '<ion-icon name="trash-outline"></ion-icon>';
         removeCaddy.addEventListener('click', function () {
         let items = localStorage.getItem('productsInCart');
         items = JSON.parse(items);
@@ -49,9 +50,11 @@
 
         let subTotal = document.createElement('div');
         subTotal.setAttribute('class', 'sub-total');
-        subTotal.innerHTML = value.price * value.inCart + '€';
+        total += parseInt(value.price) * parseInt(value.inCart);
+        subTotal.innerHTML = parseInt(value.price) * parseInt(value.inCart) + '€';
         newCaddy.appendChild(subTotal);
     }
+    console.log(total);
 
     /*let panier = localStorage.getItem("productsInCart");
     panier = JSON.parse(panier);
