@@ -28,12 +28,8 @@
         newCaddyName.textContent = value.name;
         newCaddy.appendChild(newCaddyName);
 
-        let newCaddyImg = document.createElement('img');
-        newCaddyImg.setAttribute('src', value.imageUrl);
-        newCaddy.appendChild(newCaddyImg);
-
         let newCaddyPrice = document.createElement('div');
-        newCaddyImg.setAttribute('class', 'caddy-price');
+        newCaddyPrice.setAttribute('class', 'caddy-price');
         newCaddyPrice.textContent = value.price;
         newCaddy.appendChild(newCaddyPrice);
 
@@ -46,6 +42,10 @@
         newCaddyInCart.setAttribute('class', 'caddy-incart');
         newCaddyInCart.textContent = value.inCart;
         newCaddy.appendChild(newCaddyInCart);
+
+        let newCaddyImg = document.createElement('img');
+        newCaddyImg.setAttribute('src', value.imageUrl);
+        newCaddy.appendChild(newCaddyImg);
     }
 
     /*let panier = localStorage.getItem("productsInCart");

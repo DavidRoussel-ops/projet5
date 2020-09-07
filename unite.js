@@ -81,7 +81,7 @@ function displayObject(object) {
     let objectCart = document.createElement('a');
     objectCart.setAttribute('class', 'add-cart');
     objectCart.setAttribute('href', '#');
-    objectCart.textContent = 'ajouter au panier';
+    objectCart.innerHTML = '<ion-icon name="cart-outline"></ion-icon>';
     document.getElementById('cart').appendChild(objectCart);
 
 

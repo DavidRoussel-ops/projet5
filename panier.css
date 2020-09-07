@@ -55,7 +55,7 @@ li a{
 
 #products-container{
     max-width: 650px;
-    justify-content: space-around;
+    justify-content: space-between;
     margin: auto;
     padding-top: 5em;
 }
@@ -67,6 +67,27 @@ li a{
     justify-content: space-between;
     border-bottom: 2px solid lightgray;
     margin: auto;
+    text-align: center;
+}
+
+#remove{
+    width: 100px;
+}
+
+#product-title{
+    width: 100px;
+}
+
+#product-picture{
+    width: 100px;
+}
+
+#product-price{
+    width: 100px;
+}
+
+#quantity{
+    width: 100px;
 }
 
 #productBasket{
@@ -75,8 +96,25 @@ li a{
 
 .new-caddy{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    text-align: center;
     margin: 1em auto 1em auto;
+}
+
+.remove-item{
+    width: 100px;
+}
+
+.caddy-name{
+    width: 100px;
+}
+
+.caddy-price{
+    width: 100px;
+}
+
+.caddy-incart{
+    width: 100px;
 }
 
 form {
@@ -127,12 +165,13 @@ textarea {
 }
 
 .button {
-    /* Pour placer le bouton à la même position que les champs texte */
-    padding-left: 90px; /* même taille que les étiquettes */
-}
-
-button {
     /* Cette marge supplémentaire représente grosso modo le même espace que celui
        entre les étiquettes et les champs texte */
-    margin-left: .5em;
+    width: 60px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+button a{
+    text-decoration: none;
 }

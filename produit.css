@@ -13,6 +13,10 @@ body{
     font-family: 'Londrina Solid', cursive;
 }
 
+#place{
+    display: flex;
+}
+
 header{
     height: 10em;
     width: 100%;
@@ -55,16 +59,16 @@ li a{
 }
 
 img{
-    width: 30em;
-    height: 30em;
+    width: 20em;
+    height: 20em;
 }
 
 .descrip{
     color: darkblue;
     width: 10em;
+    height: auto;
     margin-left: 2em;
     font-size: 1.5em;
-    padding-top: 4em;
 }
 
 .object{
@@ -83,10 +87,19 @@ img{
 
 .price{
     color: red;
-    font-size: 5em;
-    padding-top: 2em;
+    font-size: 3em;
 }
 
 #name{
     display: block;
+}
+
+#picture{
+    display: flex;
+    width: 20em;
+}
+
+#description{
+    display: flex;
+    width: 20em;
 }

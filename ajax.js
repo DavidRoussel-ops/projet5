@@ -53,7 +53,7 @@ function displayTeddies(teddies){
         //Cinquième élément pour le lien
         let teddyLink = document.createElement('a');
         teddyLink.setAttribute('href', 'produit.html?id=' + teddy._id + '&type=teddies');
-        teddyLink.textContent = "cliquer ici";
+        teddyLink.textContent = "Voir article";
         teddyDiv.appendChild(teddyLink);
     }
     document.getElementById("teddies").appendChild(ListOfTeddies);
