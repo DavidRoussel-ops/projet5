@@ -90,6 +90,10 @@ li a{
     width: 100px;
 }
 
+#subtotal{
+    width: 100px;
+}
+
 #productBasket{
     margin-bottom: 5em;
 }
@@ -99,6 +103,10 @@ li a{
     justify-content: space-between;
     text-align: center;
     margin: 1em auto 1em auto;
+}
+
+.sub-total{
+    width: 100px;
 }
 
 .remove-item{

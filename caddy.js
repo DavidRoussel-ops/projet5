@@ -18,7 +18,7 @@
                 items.splice(index, 1)
             }
         }
-        localStorage.setItem('productsInCart', JSON.stringify(items));
+        localStorage.setItem("productsInCart", JSON.stringify(items));
         newCaddy.innerHTML = '';
         });
         newCaddy.appendChild(removeCaddy);
@@ -46,6 +46,11 @@
         let newCaddyImg = document.createElement('img');
         newCaddyImg.setAttribute('src', value.imageUrl);
         newCaddy.appendChild(newCaddyImg);
+
+        let subTotal = document.createElement('div');
+        subTotal.setAttribute('class', 'sub-total');
+        subTotal.innerHTML = value.price * value.inCart + '€';
+        newCaddy.appendChild(subTotal);
     }
 
     /*let panier = localStorage.getItem("productsInCart");

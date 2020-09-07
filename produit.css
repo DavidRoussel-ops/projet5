@@ -15,6 +15,9 @@ body{
 
 #place{
     display: flex;
+    padding-bottom: 5em;
+    padding-left: 2.5em;
+    padding-right: 2.5em;
 }
 
 header{
