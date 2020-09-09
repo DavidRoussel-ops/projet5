@@ -46,7 +46,7 @@ function displayObject(object) {
     //Quatrième div pour le prix
     let objectPriceDiv = document.createElement('div');
     objectPriceDiv.setAttribute('class', 'price');
-    objectPriceDiv.textContent = object.price + '€';
+    objectPriceDiv.textContent = object.price/100 + ',00 €';
     document.getElementById('price').appendChild(objectPriceDiv);
 
     //let select = document.getElementById('option');

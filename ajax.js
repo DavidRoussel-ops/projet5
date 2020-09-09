@@ -36,7 +36,7 @@ function displayTeddies(teddies){
         //Deuxième div pour le prix
         let teddyPriceDiv = document.createElement('div');
         teddyPriceDiv.setAttribute('class', 'price');
-        teddyPriceDiv.textContent = teddy.price;
+        teddyPriceDiv.textContent = teddy.price/100 + ",00 €";
         teddyDiv.appendChild(teddyPriceDiv);
 
         //Troisième élement de type img pour l'image

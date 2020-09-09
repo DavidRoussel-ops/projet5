@@ -36,7 +36,7 @@ function displayCams(cameras) {
         //Deuxième div pour le prix
         let camPriceDiv = document.createElement('div');
         camPriceDiv.setAttribute('class', 'price');
-        camPriceDiv.textContent = cam.price;
+        camPriceDiv.textContent = cam.price/100 + ",00 €";
         camDiv.appendChild(camPriceDiv);
 
         //Troisième element de type img pour l'image

@@ -31,7 +31,7 @@
 
         let newCaddyPrice = document.createElement('div');
         newCaddyPrice.setAttribute('class', 'caddy-price');
-        newCaddyPrice.textContent = value.price;
+        newCaddyPrice.textContent = value.price/100 + ",00 €";
         newCaddy.appendChild(newCaddyPrice);
 
         /*let newCaddyDesc = document.createElement('div');
@@ -50,9 +50,12 @@
 
         let subTotal = document.createElement('div');
         subTotal.setAttribute('class', 'sub-total');
-        total += parseInt(value.price) * parseInt(value.inCart);
-        subTotal.innerHTML = parseInt(value.price) * parseInt(value.inCart) + '€';
+        subTotal.innerHTML = parseInt(value.price/100) * parseInt(value.inCart) + ',00 €';
         newCaddy.appendChild(subTotal);
+
+        /*let totalCaddy = document.createElement('div');
+        totalCaddy.innerHTML = total += parseInt(value.price) * parseInt(value.inCart);*/
+        document.querySelector('.total span').textContent = total += value.price/100 * value.inCart;
     }
     console.log(total);
 

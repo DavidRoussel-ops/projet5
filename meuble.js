@@ -36,7 +36,7 @@ function displayMeubles(furniture) {
         //Deuxième div pour le prix
         let meublePriceDiv = document.createElement('div');
         meublePriceDiv.setAttribute('class', 'price');
-        meublePriceDiv.textContent = meuble.price;
+        meublePriceDiv.textContent = meuble.price/100 + ",00 €";
         meubleDiv.appendChild(meublePriceDiv);
 
         //Troisième élément de type img pour l'image
