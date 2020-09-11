@@ -2,7 +2,19 @@
     let listOfItems = localStorage.getItem("productsInCart");
     listOfItems = JSON.parse(listOfItems);
     let total = 0;
+    console.log(listOfItems);
     for (const [key,value] of Object.entries(listOfItems)){
+        let idToRemove = value._id;
+        console.log("Avant la suppression de l'id", idToRemove);
+        console.log(key, idToRemove);
+        if (key === idToRemove){
+            console.log("Trouvé");
+            delete listOfItems [key];
+        }
+        /*let key = "productsInCart";
+        let value = JSON.stringify([value]);
+        localStorage.setItem(key, value);
+        let newValue = localStorage.getItem("productsInCart");*/
         console.log(value.name);
         let newCaddy = document.createElement('div');
         newCaddy.setAttribute('class', 'new-caddy');
@@ -21,6 +33,15 @@
         }
         localStorage.setItem("productsInCart", JSON.stringify(items));
         newCaddy.innerHTML = '';
+        /*let caddyItem = localStorage.getItem("productsInCart");
+        caddyItem = JSON.parse(caddyItem);
+        function removeItem(removeItem, index) {
+            if (removeItem._id === value._id){
+                caddyItem.removeItem(index, -1);
+            }
+        }
+        localStorage.setItem("productsInCart", JSON.stringify(caddyItem));
+        newCaddy.innerHTML = '';*/
         });
         newCaddy.appendChild(removeCaddy);
 
@@ -58,6 +79,20 @@
         document.querySelector('.total span').textContent = total += value.price/100 * value.inCart;
     }
     console.log(total);
+
+    /*function removeItem(){
+        let item = localStorage.getItem("productsInCart");
+        const [key,value] = Object.entries(listOfItems);
+        let arr = [key,value];
+        for (let i = 0; i < localStorage.length; i++){
+            if (localStorage.key(i).indexOf("value") > -1){
+                arr.push(localStorage.key(i));
+            }
+        }
+        for (let i = 0; i < arr.length; i++){
+            localStorage.removeItem(arr[i]);
+        }
+    }*/
 
     /*let panier = localStorage.getItem("productsInCart");
     panier = JSON.parse(panier);
