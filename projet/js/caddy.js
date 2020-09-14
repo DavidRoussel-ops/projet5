@@ -38,11 +38,6 @@ function setAllItems(){
         newCaddyPrice.textContent = value.price / 100 + ",00 €";
         newCaddy.appendChild(newCaddyPrice);
 
-        /*let newCaddyDesc = document.createElement('div');
-        newCaddyDesc.setAttribute('class', 'caddy-desc');
-        newCaddyDesc.textContent = 'Description : ' + value.description;
-        newCaddy.appendChild(newCaddyDesc);*/
-
         let newCaddyInCart = document.createElement('div');
         newCaddyInCart.setAttribute('class', 'caddy-incart');
         newCaddyInCart.textContent = value.inCart;
@@ -57,8 +52,6 @@ function setAllItems(){
         subTotal.innerHTML = parseInt(value.price / 100) * parseInt(value.inCart) + ',00 €';
         newCaddy.appendChild(subTotal);
 
-        /*let totalCaddy = document.createElement('div');
-        totalCaddy.innerHTML = total += parseInt(value.price) * parseInt(value.inCart);*/
         document.querySelector('.total span').textContent = total += value.price / 100 * value.inCart;
     }
 }
