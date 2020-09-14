@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <link href="https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@300&display=swap" rel="stylesheet">
@@ -8,21 +8,21 @@
     <title>Panier</title>
 </head>
 <body>
-    <header>
-        <nav>
-            <h1>ORINOCO</h1>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li class="cart">
-                    <a href="panier.html">
-                        <ion-icon name="cart-outline"></ion-icon>Panier<span>0</span>
-                    </a>
-                </li>
-            </ul>
-        </nav>
-    </header>
-    <div id="container">
+<header>
+    <nav>
+        <h1>ORINOCO</h1>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li class="cart">
+                <a href="panier.html">
+                    <ion-icon name="cart-outline"></ion-icon>Panier<span>0</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<div id="container">
     <div id="products-container">
         <div id="product-header">
             <h5 id="remove">SUPPRIMER</h5>
@@ -38,36 +38,23 @@
         <div id="total-caddy">
             <p class="total">Total de votre panier <span></span>,00 €.</p>
         </div>
+        <div>
+            <form name="validation">
+                <input type="text" name="name" placeholder="Prénom"><br>
+                <input type="text" name="sub-name" placeholder="Nom"><br>
+                <input type="text" name="address" placeholder="Adresse"><br>
+                <input type="text" name="city" placeholder="Ville"><br>
+                <input type="email" name="email" placeholder="Adresse mail">
+                <input type="submit" value="Valider">
+            </form>
+            <p id="erreur"></p>
+        </div>
     </div>
-    <form action="/server/server.js" method="post">
-        <div>
-            <label for="surname">Nom :</label>
-            <input type="text" id="surname" name="user_name">
-        </div>
-        <div>
-            <label for="name">Prénom :</label>
-            <input type="text" id="name" name="user_name">
-        </div>
-        <div>
-            <label for="phone">Téléphone :</label>
-            <input type="number" id="phone" name="user_phone">
-        </div>
-        <div>
-            <label for="mail">e-mail :</label>
-            <input type="email" id="mail" name="user_mail">
-        </div>
-        <div>
-            <label for="msg">Message :</label>
-            <textarea id="msg" name="user_message"></textarea>
-        </div>
-    </form>
-    <div class="button">
-        <button type="submit"><a href="formulaire.html">Valider</a></button>
-    </div>
-    </div>
+</div>
     <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
+    <script src="js/formulaire.js"></script>
     <script src="js/panier.js"></script>
-<script src="js/caddy.js"></script>
-<script src="js/unite.js"></script>
+    <script src="js/caddy.js"></script>
+    <script src="js/unite.js"></script>
 </body>
 </html>
