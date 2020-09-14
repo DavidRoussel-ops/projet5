@@ -27,6 +27,43 @@ document.forms['validation'].addEventListener("submit", function (e) {
     }
 })
 
+document.forms['validation'].addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    let data = new FormData(this);
+
+    let xhr = new XMLHttpRequest();
+
+    xhr.onreadystatechange = function () {
+        if (this.readyState === 4 && this.status === 200){
+            console.log(this.response);
+        } else if (this.readyState === 4){
+            alert("Une erreur est survenue...");
+        }
+    };
+
+    xhr.open('POST', 'panier.html', true);
+    xhr.responseType = "json";
+    //xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded")
+    xhr.send(data);
+
+    return false;
+
+});
+
+/*let demo = document.getElementById("demo");
+let xhr = new XMLHttpRequest();
+
+xhr.onreadystatechange = function () {
+    console.log(this);
+    if (this.readyState === 4 && this.status === 200){
+        demo.innerHTML = this.response;
+    }
+};
+
+xhr.open('GET', "projet/panier.html/caddy.js", true);
+xhr.send();*/
+
     /*document.getElementsById('validation').addEventListener("submit", function (e) {
 
     let erreur;
