@@ -1,5 +1,6 @@
 setAllItems()
 function setAllItems(){
+    document.querySelector('.total span').textContent = 0;
     let listOfItems = localStorage.getItem("productsInCart");
     listOfItems = JSON.parse(listOfItems);
     let total = 0;
@@ -21,6 +22,14 @@ function setAllItems(){
                 if (key === currentId) {
                     delete Cart[key]
                     localStorage.setItem("productsInCart", JSON.stringify(Cart))
+                    let total = localStorage.getItem("totalCost");
+                    let numbClick = localStorage.getItem("cartNumbers");
+                    console.log(value);
+                    numbClick = numbClick-value.inCart;
+                    document.querySelector('.cart span').textContent = numbClick;
+                    localStorage.setItem('cartNumbers', numbClick);
+                    total = total-value.price* value.inCart;
+                    localStorage.setItem('totalCost', total);
                     mainContainer.innerHTML = "";
                     setAllItems()
                 }

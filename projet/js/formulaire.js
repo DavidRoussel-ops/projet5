@@ -28,9 +28,17 @@ document.forms['validation'].addEventListener("submit", function (e) {
 })
 
 document.forms['validation'].addEventListener("submit", function (e) {
-    e.preventDefault();
+
 
     let data = new FormData(this);
+
+    let contact = {
+        name: data['name'].value,
+        subName: data['sub-name'].value,
+        address: data['address'].value,
+        city: data['city'].value,
+        mail: data['email'].value
+    }
 
     let xhr = new XMLHttpRequest();
 
@@ -38,14 +46,15 @@ document.forms['validation'].addEventListener("submit", function (e) {
         if (this.readyState === 4 && this.status === 200){
             console.log(this.response);
         } else if (this.readyState === 4){
+            e.preventDefault();
             alert("Une erreur est survenue...");
         }
     };
 
-    xhr.open('POST', 'panier.html', true);
+    xhr.open('POST', 'http://localhost:3000/api/', true);
     xhr.responseType = "json";
     //xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded")
-    xhr.send(data);
+    xhr.send(contact);
 
     return false;
 
