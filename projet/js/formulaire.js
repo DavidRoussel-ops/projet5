@@ -1,42 +1,7 @@
 document.forms['validation'].addEventListener("submit", function (e) {
-
-    let erreur;
-
-    let inputs = this;
-
-    // Traitement cas par cas (input unique)
-    if (inputs['email'].value !== "emaildebase@gmail.com"){
-        console.log(inputs['email'].value);
-        erreur = "Adresse email incorrecte";
-    }
-
-    // Traitement générique
-    for (let i = 0; i < inputs.length; i++) {
-        console.log(inputs[i]);
-        if (!inputs[i].value) {
-            erreur = 'Veuillez renseigner tous les champs';
-        }
-    }
-
-    if (erreur) {
-        e.preventDefault();
-        document.getElementById('erreur').textContent = erreur;
-        return false;
-    } else {
-        alert('formulaire envoyé !');
-    }
+    e.preventDefault();
 
     let data = new FormData(this);
-
-    let contact = {
-        name: data['name'],
-        subName: data['sub-name'],
-        address: data['address'],
-        city: data['city'],
-        mail: data['email']
-    }
-
-
 
     let xhr = new XMLHttpRequest();
 
@@ -44,15 +9,15 @@ document.forms['validation'].addEventListener("submit", function (e) {
         if (this.readyState === 4 && this.status === 200){
             console.log(this.response);
         } else if (this.readyState === 4){
-            e.preventDefault();
             alert("Une erreur est survenue...");
+            console.log(this.readyState);
         }
     };
 
-    xhr.open('POST', "http://localhost:3000/api/panier.html/order", true);
+    xhr.open('POST', "http://localhost:3000/api/controllers/teddy/order", true);
     xhr.responseType = "json";
     //xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded")
-    xhr.send(contact);
+    xhr.send(data);
 
     return false;
 
