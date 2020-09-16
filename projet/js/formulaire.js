@@ -1,9 +1,17 @@
-document.forms['validation'].addEventListener("submit", function (e) {
+document.getElementById('validation').addEventListener("submit", function (e) {
     e.preventDefault();
 
-    let data = new FormData(this);
+    let data = [document.getElementById('productBasket')];
 
     let xhr = new XMLHttpRequest();
+
+    let contact = {
+        firstName: document.getElementById('firstName').value,
+        lastName: document.getElementById('lastName').value,
+        address: document.getElementById('address').value,
+        city: document.getElementById('city').value,
+        email: document.getElementById('email').value
+    }
 
     xhr.onreadystatechange = function () {
         if (this.readyState === 4 && this.status === 200){
@@ -14,10 +22,12 @@ document.forms['validation'].addEventListener("submit", function (e) {
         }
     };
 
-    xhr.open('POST', "http://localhost:3000/api/controllers/teddy/order", true);
-    xhr.responseType = "json";
-    //xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded")
-    xhr.send(data);
+    xhr.open('POST', "http://localhost:63342/projet5/projet/panier.html?_ijt=3h07r0mfvoug2gqs4c7l8puevl/order", true);
+    //xhr.responseType = "json";
+    xhr.setRequestHeader("Content-type", "application/json")
+    xhr.send(JSON.stringify(contact));
+    console.log(contact);
+    console.log(data);
 
     return false;
 
