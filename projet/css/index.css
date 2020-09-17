@@ -7,10 +7,10 @@ body{
 }
 
 .container{
-    background-color: black;
+    background-color: white;
     position: relative;
-    width: 800px;
-    height: 500px;
+    width: 100%;
+    height: 660px;
     margin: 0 auto;
 }
 
@@ -23,26 +23,50 @@ body{
     transition: 0.5s;
 }
 
+.container:hover .clip{
+    clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+}
+
+.container .clip:hover{
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+.container .clip:hover #teddies{
+    bottom: 0;
+    opacity: 1;
+}
+
+.container .clip:hover #cameras{
+    bottom: 0;
+    opacity: 1;
+}
+
+.container .clip:hover #meubles{
+    bottom: 0;
+    opacity: 1;
+}
+
 .clip1{
-    background: url("Image/teddy.jpg");
+    background: url("images/teddy.jpeg");
     background-size: cover;
     clip-path: polygon(0 0, 55% 0, 20% 100%, 0 100%);
 }
 
 .clip2{
-    background: url("Image/photo.jpg");
+    background: url("images/photo.jpg");
     background-size: cover;
     clip-path: polygon(55% 0, 100% 0, 45% 100%, 20% 100%);
 }
 
 .clip3{
-    background: url("Image/table.jpg");
+    background: url("images/table.jpg");
     background-size: cover;
     clip-path: polygon(100% 0, 100% 0, 100% 100%, 45% 100%);
 }
 
 #conteneur{
     font-family: 'Londrina Solid', cursive;
+    width: 100%;
 }
 
 .welcome{
@@ -64,27 +88,36 @@ body{
 }
 
 #teddies{
-    display: none;
-    margin-bottom: 1em;
-    margin-left: auto;
-    margin-right: auto;
+    position: absolute;
+    bottom: -100%;
+    left: 0;
     width: 80%;
+    padding: 20px;
+    background: rgba(52,73,94 ,1);
+    opacity: 0;
+    transition: 0.5s;
 }
 
 #cameras{
-    display: none;
-    margin-bottom: 1em;
-    margin-left: auto;
-    margin-right: auto;
+    position: absolute;
+    bottom: -100%;
+    left: 0;
     width: 80%;
+    padding: 20px;
+    background: rgba(52,73,94 ,1);
+    opacity: 0;
+    transition: 0.5s;
 }
 
 #meubles{
-    display: none;
-    margin-bottom: 1em;
-    margin-left: auto;
-    margin-right: auto;
+    position: absolute;
+    bottom: -100%;
+    left: 0;
     width: 80%;
+    padding: 20px;
+    background: rgba(52,73,94 ,1);
+    opacity: 0;
+    transition: 0.5s;
 }
 
 .list-of-teddies{
