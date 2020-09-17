@@ -2,7 +2,7 @@ body{
     width: 100%;
     height: 100%;
     font-family: 'Londrina Solid', cursive;
-    background-color: rgba(157,35,203,0.4);
+    background-color: rgba(52,73,94 ,1);
 }
 
 
@@ -87,7 +87,7 @@ img{
 }
 
 .name{
-    color: blueviolet;
+    color: rgba(52,73,94 ,1);
     font-size: 5em;
     text-align: center;
     display: block;

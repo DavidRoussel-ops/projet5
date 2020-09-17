@@ -2,7 +2,7 @@ document.getElementById('validation').addEventListener("submit", function (e) {
     e.preventDefault();
 
     let data = [document.getElementById('productBasket')];
-    
+
     let xhr = new XMLHttpRequest();
 
     let contact = {
