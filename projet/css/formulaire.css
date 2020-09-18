@@ -51,6 +51,10 @@ li a{
     text-decoration: none;
 }
 
+h1 a{
+    color: white;
+}
+
 h2{
     text-align: center;
 }

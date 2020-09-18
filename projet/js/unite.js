@@ -27,10 +27,6 @@ function displayObject(object) {
     objectNameDiv.textContent = object.name;
     document.getElementById('name').appendChild(objectNameDiv);
 
-    let objectPicture = document.createElement('img');
-    objectPicture.setAttribute('src', object.imageUrl);
-    document.getElementById('picture').appendChild(objectPicture);
-
     let objectDesc = document.createElement('div');
     objectDesc.setAttribute('class', 'descrip');
     objectDesc.textContent = object.description;
@@ -40,6 +36,10 @@ function displayObject(object) {
     objectPriceDiv.setAttribute('class', 'price');
     objectPriceDiv.textContent = object.price / 100 + ',00 €';
     document.getElementById('price').appendChild(objectPriceDiv);
+
+    let objectPicture = document.createElement('img');
+    objectPicture.setAttribute('src', object.imageUrl);
+    document.getElementById('picture').appendChild(objectPicture);
 
     let objectSlt = document.createElement('select')
     const queryString = window.location.search;

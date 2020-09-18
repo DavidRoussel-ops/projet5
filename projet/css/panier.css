@@ -54,6 +54,10 @@ li a{
     text-decoration: none;
 }
 
+h1 a{
+    color: white;
+}
+
 #products-container{
     max-width: 650px;
     justify-content: space-between;
