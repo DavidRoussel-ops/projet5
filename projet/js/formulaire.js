@@ -26,8 +26,24 @@ document.getElementById('validation').addEventListener("submit", function (e) {
     //xhr.responseType = "json";
     xhr.setRequestHeader("Content-type", "application/json")
     xhr.send(JSON.stringify(contact));
+    alert(contact);
     console.log(contact);
     console.log(data);
+
+    function displaycontact(contact) {
+        contact = JSON.parse(contact);
+
+        let contactDiv = document.getElementById('div');
+        contactDiv.setAttribute('class', 'contact');
+        document.getElementById('thanks');
+
+        let contactFirstName = document.createElement('p');
+        contactFirstName.setAttribute('class', 'first-name');
+        contactFirstName.textContent = contact.firstName.value;
+        contactDiv.appendChild(contactFirstName);
+    }
+
+    displaycontact();
 
     return false;
 
