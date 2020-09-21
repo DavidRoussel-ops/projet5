@@ -58,3 +58,30 @@ h1 a{
 h2{
     text-align: center;
 }
+
+footer{
+    bottom: 0;
+    height: 4em;
+}
+
+footer ul{
+    display: flex;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+footer ul li {
+    font-size: 2em;
+    margin-top: 0.25em;
+    margin-left: auto;
+    margin-right: auto;
+    list-style-type: none;
+    color: white;
+}
+
+footer ul li a{
+    background-color: rgba(52,73,94 ,1);
+    color: white;
+    text-decoration: none;
+}
