@@ -1,17 +1,29 @@
 document.getElementById('validation').addEventListener("submit", function (e) {
     e.preventDefault();
 
-    let data = [document.getElementById('productBasket')];
+    let product = [];
+
+    let listOfItems = localStorage.getItem("productsInCart");
+    listOfItems = JSON.parse(listOfItems);
+
+    for (const [key, value] of Object.entries(listOfItems)) {
+        product.push(value._id);
+    }
 
     let xhr = new XMLHttpRequest();
 
-    let contact = {
-        firstName: document.getElementById('firstName').value,
-        lastName: document.getElementById('lastName').value,
-        address: document.getElementById('address').value,
-        city: document.getElementById('city').value,
-        email: document.getElementById('email').value
+    let data = {
+        "contact": {
+            "firstName": document.getElementById('firstName').value,
+            "lastName": document.getElementById('lastName').value,
+            "address": document.getElementById('address').value,
+            "city": document.getElementById('city').value,
+            "email": document.getElementById('email').value
+        },
+        "products": product
     }
+
+    console.log(data);
 
     xhr.onreadystatechange = function () {
         if (this.readyState === 4 && this.status === 200){
@@ -22,15 +34,13 @@ document.getElementById('validation').addEventListener("submit", function (e) {
         }
     };
 
-    xhr.open('POST', "http://localhost:63342/projet5/projet/panier.html?_ijt=3h07r0mfvoug2gqs4c7l8puevl/order", true);
+    xhr.open('POST', "http://localhost:3000/api/teddies/order", true);
     //xhr.responseType = "json";
-    xhr.setRequestHeader("Content-type", "application/json")
-    xhr.send(JSON.stringify(contact));
-    alert(contact);
-    console.log(contact);
-    console.log(data);
+    xhr.setRequestHeader('Content-Type', 'application/json');
+    xhr.send(JSON.stringify(data));
 
-    function displaycontact(contact) {
+
+    /*function displaycontact(contact) {
         contact = JSON.parse(contact);
 
         let contactDiv = document.getElementById('div');
@@ -43,7 +53,7 @@ document.getElementById('validation').addEventListener("submit", function (e) {
         contactDiv.appendChild(contactFirstName);
     }
 
-    displaycontact();
+    displaycontact();*/
 
     return false;
 
