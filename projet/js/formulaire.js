@@ -1,42 +1,44 @@
 document.getElementById('validation').addEventListener("submit", function (e) {
     e.preventDefault();
 
+    let xhr = new XMLHttpRequest();
+
     let url = "http://localhost:3000/api/teddies/order";
 
     let urlCam = "http://localhost:3000/api/cameras/order";
 
     let urlFurn = "http://localhost:3000/api/furniture/order";
 
-    let productTeddy = [];
+    /*let productsCamera = [];
 
-    let productCamera = [];
-
-    let productMeuble = [];
+    let productsMeuble = [];*/
 
     let listOfItems = localStorage.getItem("productsInCart");
     listOfItems = JSON.parse(listOfItems);
 
+    let products = [];
+
     for (const [key, value] of Object.entries(listOfItems)) {
         if (value.type === "teddy") {
-            productTeddy.push(value._id);
+            products.push(value._id);
         } else if (value.type === "camera") {
-            productCamera.push(value._id);
+            products.push(value._id);
         } else if (value.type === "meuble") {
-            productMeuble.push(value._id);
+            products.push(value._id);
         }
     }
 
     for (const [key, value] of Object.entries(listOfItems)) {
         if (url === true) {
-            productTeddy.push(value._id);
+            products.push(value._id);
         } else if (urlCam === true){
-            productCamera.push(value._id);
+            products.push(value._id);
         } else if (urlFurn === true){
-            productMeuble.push(value._id);
+            products.push(value._id);
         }
     }
 
-    let xhr = new XMLHttpRequest();
+
 
     let data2 = {
         "contact": {
@@ -46,10 +48,10 @@ document.getElementById('validation').addEventListener("submit", function (e) {
             "city": document.getElementById('city').value,
             "email": document.getElementById('email').value
         },
-        "products": productTeddy
+        "products": products
     }
 
-    let data3 = {
+    /*let data3 = {
         "contact": {
             "firstName": document.getElementById('firstName').value,
             "lastName": document.getElementById('lastName').value,
@@ -57,7 +59,7 @@ document.getElementById('validation').addEventListener("submit", function (e) {
             "city": document.getElementById('city').value,
             "email": document.getElementById('email').value
         },
-        "products": productCamera
+        "productss": productsCamera
     }
 
     let data4 = {
@@ -68,8 +70,8 @@ document.getElementById('validation').addEventListener("submit", function (e) {
             "city": document.getElementById('city').value,
             "email": document.getElementById('email').value
         },
-        "products": productMeuble
-    }
+        "productss": productsMeuble
+    }*/
 
     xhr.onreadystatechange = function () {
         if (this.readyState === 4 && this.status === 200){
@@ -85,8 +87,8 @@ document.getElementById('validation').addEventListener("submit", function (e) {
     //xhr.responseType = "json";
     xhr.setRequestHeader('Content-Type', 'application/json');
     xhr.send(JSON.stringify(data2));
-    xhr.send(JSON.stringify(data3));
-    xhr.send(JSON.stringify(data4));
+    /*xhr.send(JSON.stringify(data3));
+    xhr.send(JSON.stringify(data4));*/
 
     return false;
 
