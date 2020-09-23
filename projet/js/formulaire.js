@@ -1,18 +1,44 @@
 document.getElementById('validation').addEventListener("submit", function (e) {
     e.preventDefault();
 
-    let product = [];
+    let url = "http://localhost:3000/api/teddies/order";
+
+    let urlCam = "http://localhost:3000/api/cameras/order";
+
+    let urlFurn = "http://localhost:3000/api/furniture/order";
+
+    let productTeddy = [];
+
+    let productCamera = [];
+
+    let productMeuble = [];
 
     let listOfItems = localStorage.getItem("productsInCart");
     listOfItems = JSON.parse(listOfItems);
 
     for (const [key, value] of Object.entries(listOfItems)) {
-        product.push(value._id);
+        if (value.type === "teddy") {
+            productTeddy.push(value._id);
+        } else if (value.type === "camera") {
+            productCamera.push(value._id);
+        } else if (value.type === "meuble") {
+            productMeuble.push(value._id);
+        }
+    }
+
+    for (const [key, value] of Object.entries(listOfItems)) {
+        if (url === true) {
+            productTeddy.push(value._id);
+        } else if (urlCam === true){
+            productCamera.push(value._id);
+        } else if (urlFurn === true){
+            productMeuble.push(value._id);
+        }
     }
 
     let xhr = new XMLHttpRequest();
 
-    let data = {
+    let data2 = {
         "contact": {
             "firstName": document.getElementById('firstName').value,
             "lastName": document.getElementById('lastName').value,
@@ -20,50 +46,51 @@ document.getElementById('validation').addEventListener("submit", function (e) {
             "city": document.getElementById('city').value,
             "email": document.getElementById('email').value
         },
-        "products": product
+        "products": productTeddy
     }
 
-    console.log(data);
+    let data3 = {
+        "contact": {
+            "firstName": document.getElementById('firstName').value,
+            "lastName": document.getElementById('lastName').value,
+            "address": document.getElementById('address').value,
+            "city": document.getElementById('city').value,
+            "email": document.getElementById('email').value
+        },
+        "products": productCamera
+    }
+
+    let data4 = {
+        "contact": {
+            "firstName": document.getElementById('firstName').value,
+            "lastName": document.getElementById('lastName').value,
+            "address": document.getElementById('address').value,
+            "city": document.getElementById('city').value,
+            "email": document.getElementById('email').value
+        },
+        "products": productMeuble
+    }
 
     xhr.onreadystatechange = function () {
         if (this.readyState === 4 && this.status === 200){
             console.log(this.response);
         } else if (this.readyState === 4){
-            alert("Une erreur est survenue...");
             console.log(this.readyState);
         }
     };
 
-    xhr.open('POST', "http://localhost:3000/api/teddies/order", true);
+    xhr.open('POST', url, true);
+    xhr.open('POST', urlCam, true);
+    xhr.open('POST', urlFurn, true);
     //xhr.responseType = "json";
     xhr.setRequestHeader('Content-Type', 'application/json');
-    xhr.send(JSON.stringify(data));
-
-
-    /*function displaycontact(contact) {
-        contact = JSON.parse(contact);
-
-        let contactDiv = document.getElementById('div');
-        contactDiv.setAttribute('class', 'contact');
-        document.getElementById('thanks');
-
-        let contactFirstName = document.createElement('p');
-        contactFirstName.setAttribute('class', 'first-name');
-        contactFirstName.textContent = contact.firstName.value;
-        contactDiv.appendChild(contactFirstName);
-    }
-
-    displaycontact();*/
+    xhr.send(JSON.stringify(data2));
+    xhr.send(JSON.stringify(data3));
+    xhr.send(JSON.stringify(data4));
 
     return false;
 
 });
-
-
-
-
-
-
 
 
 /*document.getElementById('validation').addEventListener("submit", function (e) {
