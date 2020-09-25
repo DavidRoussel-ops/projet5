@@ -9,36 +9,10 @@ document.getElementById('validation').addEventListener("submit", function (e) {
 
     let urlFurn = "http://localhost:3000/api/furniture/order";
 
-    /*let productsCamera = [];
-
-    let productsMeuble = [];*/
-
-    let listOfItems = localStorage.getItem("productsInCart");
-    listOfItems = JSON.parse(listOfItems);
-
     let products = [];
 
-    for (const [key, value] of Object.entries(listOfItems)) {
-        if (value.type === "teddy") {
-            products.push(value._id);
-        } else if (value.type === "camera") {
-            products.push(value._id);
-        } else if (value.type === "meuble") {
-            products.push(value._id);
-        }
-    }
-
-    for (const [key, value] of Object.entries(listOfItems)) {
-        if (url === true) {
-            products.push(value._id);
-        } else if (urlCam === true){
-            products.push(value._id);
-        } else if (urlFurn === true){
-            products.push(value._id);
-        }
-    }
-
-
+    /*let listOfItems = localStorage.getItem("productsInCart");
+    listOfItems = JSON.parse(listOfItems);*/
 
     let data2 = {
         "contact": {
@@ -50,6 +24,54 @@ document.getElementById('validation').addEventListener("submit", function (e) {
         },
         "products": products
     }
+
+    xhr.onreadystatechange = function () {
+        if (this.readyState === 4 && this.status === 200){
+            console.log(this.response);
+        } else if (this.readyState === 4){
+            console.log(this.readyState);
+        }
+    };
+
+    xhr.open('POST', url, true);
+    xhr.open('POST', urlCam, true);
+    xhr.open('POST', urlFurn, true);
+    //xhr.responseType = "json";
+    xhr.setRequestHeader('Content-Type', 'application/json');
+    xhr.send(JSON.stringify(data2));
+    /*xhr.send(JSON.stringify(data3));
+    xhr.send(JSON.stringify(data4));*/
+
+    return false;
+
+});
+
+    /*let productsCamera = [];
+
+    let productsMeuble = [];*/
+
+
+
+    /*for (const [key, value] of Object.entries(listOfItems)) {
+        if (value.type === "teddy") {
+            products.push(value._id);
+        } else if (value.type === "camera") {
+            products.push(value._id);
+        } else if (value.type === "meuble") {
+            products.push(value._id);
+        }
+    }*/
+
+    /*for (const [key, value] of Object.entries(listOfItems)) {
+        if (url === true) {
+            products.push(value._id);
+        } else if (urlCam === true){
+            products.push(value._id);
+        } else if (urlFurn === true){
+            products.push(value._id);
+        }
+    }*/
+
 
     /*let data3 = {
         "contact": {
@@ -72,27 +94,6 @@ document.getElementById('validation').addEventListener("submit", function (e) {
         },
         "productss": productsMeuble
     }*/
-
-    xhr.onreadystatechange = function () {
-        if (this.readyState === 4 && this.status === 200){
-            console.log(this.response);
-        } else if (this.readyState === 4){
-            console.log(this.readyState);
-        }
-    };
-
-    xhr.open('POST', url, true);
-    xhr.open('POST', urlCam, true);
-    xhr.open('POST', urlFurn, true);
-    //xhr.responseType = "json";
-    xhr.setRequestHeader('Content-Type', 'application/json');
-    xhr.send(JSON.stringify(data2));
-    /*xhr.send(JSON.stringify(data3));
-    xhr.send(JSON.stringify(data4));*/
-
-    return false;
-
-});
 
 
 /*document.getElementById('validation').addEventListener("submit", function (e) {
