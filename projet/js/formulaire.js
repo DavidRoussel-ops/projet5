@@ -1,7 +1,59 @@
-document.getElementById('validation').addEventListener("submit", function (e) {
-    e.preventDefault();
+ document.getElementById('validation').addEventListener("submit", function (e) {
+        e.preventDefault();
 
-    let xhr = new XMLHttpRequest();
+        let xhr = new XMLHttpRequest();
+
+        let url = "http://localhost:3000/api/teddies/order";
+
+        let urlCam = "http://localhost:3000/api/cameras/order";
+
+        let urlFurn = "http://localhost:3000/api/furniture/order";
+
+     /*let listOfItems = localStorage.getItem("productsInCart");
+     listOfItems = JSON.parse(listOfItems);
+
+     for (const [key, value] of Object.entries(listOfItems)) {
+         products.push(value._id);
+     }*/
+
+         let products = [];
+
+         let data2 = {
+             "contact": {
+                 "firstName": document.getElementById('firstName').value,
+                 "lastName": document.getElementById('lastName').value,
+                 "address": document.getElementById('address').value,
+                 "city": document.getElementById('city').value,
+                 "email": document.getElementById('email').value
+             },
+             "products": products
+         }
+
+
+        xhr.onreadystatechange = function () {
+            if (this.readyState === 4 && this.status === 200) {
+                console.log(this.response);
+            } else if (this.readyState === 4) {
+                console.log(this.readyState);
+            }
+        };
+
+        xhr.open('POST', url, true);
+        xhr.open('POST', urlCam, true);
+        xhr.open('POST', urlFurn, true);
+        //xhr.responseType = "json";
+        xhr.setRequestHeader('Content-Type', 'application/json');
+        xhr.send(JSON.stringify(data2));
+        /*xhr.send(JSON.stringify(data3));
+        xhr.send(JSON.stringify(data4));*/
+
+        return false;
+
+    });
+
+document.getElementById('validation').addEventListener('submit', function () {
+
+    let xhr2 = new XMLHttpRequest();
 
     let url = "http://localhost:3000/api/teddies/order";
 
@@ -9,12 +61,16 @@ document.getElementById('validation').addEventListener("submit", function (e) {
 
     let urlFurn = "http://localhost:3000/api/furniture/order";
 
-    let products = [];
+    let product = [];
 
-    /*let listOfItems = localStorage.getItem("productsInCart");
-    listOfItems = JSON.parse(listOfItems);*/
+    let listOfItems = localStorage.getItem('productsInCart');
+    listOfItems = JSON.parse(listOfItems);
 
-    let data2 = {
+    for (const [key, value] of Object.entries(listOfItems)){
+        product.push(value._id);
+    }
+
+    let data3 = {
         "contact": {
             "firstName": document.getElementById('firstName').value,
             "lastName": document.getElementById('lastName').value,
@@ -22,29 +78,16 @@ document.getElementById('validation').addEventListener("submit", function (e) {
             "city": document.getElementById('city').value,
             "email": document.getElementById('email').value
         },
-        "products": products
+        "products": product
     }
 
-    xhr.onreadystatechange = function () {
-        if (this.readyState === 4 && this.status === 200){
-            console.log(this.response);
-        } else if (this.readyState === 4){
-            console.log(this.readyState);
-        }
-    };
-
-    xhr.open('POST', url, true);
-    xhr.open('POST', urlCam, true);
-    xhr.open('POST', urlFurn, true);
-    //xhr.responseType = "json";
-    xhr.setRequestHeader('Content-Type', 'application/json');
-    xhr.send(JSON.stringify(data2));
-    /*xhr.send(JSON.stringify(data3));
-    xhr.send(JSON.stringify(data4));*/
-
+    xhr2.open('POST', url, true);
+    xhr2.open('POST', urlCam, true);
+    xhr2.open('POST', urlFurn, true);
+    xhr2.setRequestHeader('Content-Type', 'application/json');
+    xhr2.send(JSON.stringify(data3));
     return false;
-
-});
+})
 
     /*let productsCamera = [];
 
