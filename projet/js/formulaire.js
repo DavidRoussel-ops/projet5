@@ -5,9 +5,9 @@
 
         let url = "http://localhost:3000/api/teddies/order";
 
-        let urlCam = "http://localhost:3000/api/cameras/order";
+        /*let urlCam = "http://localhost:3000/api/cameras/order";
 
-        let urlFurn = "http://localhost:3000/api/furniture/order";
+        let urlFurn = "http://localhost:3000/api/furniture/order";*/
 
      /*let listOfItems = localStorage.getItem("productsInCart");
      listOfItems = JSON.parse(listOfItems);
@@ -39,8 +39,8 @@
         };
 
         xhr.open('POST', url, true);
-        xhr.open('POST', urlCam, true);
-        xhr.open('POST', urlFurn, true);
+        /*xhr.open('POST', urlCam, true);
+        xhr.open('POST', urlFurn, true);*/
         //xhr.responseType = "json";
         xhr.setRequestHeader('Content-Type', 'application/json');
         xhr.send(JSON.stringify(data2));
@@ -51,7 +51,21 @@
 
     });
 
-document.getElementById('validation').addEventListener('submit', function () {
+function thankYou() {
+
+    localStorage.getItem('totalCost');
+    let thankDiv = document.createElement('div');
+    thankDiv.setAttribute('class', 'thank-div');
+    document.getElementById('thanks').appendChild(thankDiv);
+
+    let priceThank = document.createElement('p');
+    priceThank.setAttribute('class', 'first-thank');
+    priceThank.textContent = 'Le total de votre commande est de ' + totalCost();
+    thankDiv.appendChild(priceThank);
+}
+
+thankYou();
+/*document.getElementById('validation').addEventListener('submit', function () {
 
     let xhr2 = new XMLHttpRequest();
 
@@ -87,7 +101,7 @@ document.getElementById('validation').addEventListener('submit', function () {
     xhr2.setRequestHeader('Content-Type', 'application/json');
     xhr2.send(JSON.stringify(data3));
     return false;
-})
+})*/
 
     /*let productsCamera = [];
 
