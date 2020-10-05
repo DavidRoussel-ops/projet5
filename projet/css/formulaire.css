@@ -59,6 +59,26 @@ h2{
     text-align: center;
 }
 
+.new-wish{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    margin: 1em auto 1em auto;
+}
+
+.wish-name{
+    width: 100px;
+}
+
+.wish-incart{
+    width: 100px;
+}
+
+img{
+    width: 100px;
+    height: 100px;
+}
+
 footer{
     bottom: 0;
     height: 4em;

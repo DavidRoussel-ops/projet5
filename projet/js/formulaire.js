@@ -51,7 +51,7 @@
 
     });
 
-function thankYou() {
+/*function thankYou() {
 
     localStorage.getItem('totalCost');
     let thankDiv = document.createElement('div');
@@ -64,7 +64,7 @@ function thankYou() {
     thankDiv.appendChild(priceThank);
 }
 
-thankYou();
+thankYou();*/
 /*document.getElementById('validation').addEventListener('submit', function () {
 
     let xhr2 = new XMLHttpRequest();
