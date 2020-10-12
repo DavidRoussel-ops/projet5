@@ -31,8 +31,11 @@
 
 
         xhr.onreadystatechange = function () {
-            if (this.readyState === 4 && this.status === 200) {
-                console.log(this.response);
+            if (this.readyState === 4) {
+                console.log();
+                let data = JSON.parse(this.response);
+                let orderId = data.orderId;
+                localStorage.setItem("orderId", orderId)
             } else if (this.readyState === 4) {
                 console.log(this.readyState);
             }
@@ -50,6 +53,8 @@
         return false;
 
     });
+
+
 
 /*function thankYou() {
 
