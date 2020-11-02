@@ -15,7 +15,7 @@ function ajaxGet(url, callback) {
 }
 
 function displayMeubles(furniture) {
-    console.log("affichage de la liste des meubles en chène.")
+    console.log("affichage de la liste des meubles.")
     furniture = JSON.parse(furniture)
 
     let ListOfFurniture = document.createElement('div')
