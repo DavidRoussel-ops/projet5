@@ -29,10 +29,22 @@ document.getElementById('validation').addEventListener("submit", function (e) {
                 console.log(this.readyState);
             }
         };
-
-        xhr.open('POST', url, true);
-        xhr.setRequestHeader('Content-Type', 'application/json');
-        xhr.send(JSON.stringify(data2));
+        const promPost = new Promise((resolve, reject) => {
+            xhr.open('POST', url, true);
+            xhr.setRequestHeader('Content-Type', 'application/json');
+            xhr.send(JSON.stringify(data2));
+            const starting = true;
+            if (starting === true){
+                resolve()
+            }else {
+                reject()
+            }
+        })
+    promPost.then(() => {
+        console.log("C'est bon!")
+    }).catch(() => {
+        console.log("Oups j'ai fais une erreur...")
+    })
 
         return false;
 });

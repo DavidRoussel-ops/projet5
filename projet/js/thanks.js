@@ -1,5 +1,11 @@
 thanksYou()
 function thanksYou() {
+    let commandeNumber = localStorage.getItem("orderId");
+    let newContainer = document.getElementById("thanksId");
+    let thanksSpitch = document.createElement('div');
+    thanksSpitch.setAttribute('class', 'spitch');
+    thanksSpitch.textContent = "Votre numéros de commande est le " + commandeNumber + " .";
+    newContainer.appendChild(thanksSpitch);
     let listWish = localStorage.getItem("productsInCart");
     listWish = JSON.parse(listWish);
     let firstContainer = document.getElementById("thanks");
