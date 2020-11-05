@@ -42,6 +42,7 @@ document.getElementById('validation').addEventListener("submit", function (e) {
         })
     promPost.then(() => {
         console.log("C'est bon!")
+        window.location.href = "formulaire.html";
     }).catch(() => {
         console.log("Oups j'ai fais une erreur...")
     })
