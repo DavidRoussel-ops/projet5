@@ -55,21 +55,21 @@
         display: flex;
         margin-left: auto;
         margin-right: auto;
-        justify-content: space-between;
+        justify-content: center;
     }
 
     .list-of-cam {
         display: flex;
         margin-left: auto;
         margin-right: auto;
-        justify-content: space-between;
+        justify-content: center;
     }
 
     .List-of-furniture {
         display: flex;
         margin-left: auto;
         margin-right: auto;
-        justify-content: space-between;
+        justify-content: center;
     }
 
     .teddy{

@@ -7,7 +7,7 @@ function displayMeubles(furniture) {
     for (let meuble of furniture){
 
         let meubleDiv = document.createElement('div');
-        meubleDiv.setAttribute('class', 'col-md-2 col-sm-6 col-xs-12 meuble');
+        meubleDiv.setAttribute('class', 'col-lg-2 col-md-6 col-xs-12 meuble');
         ListOfFurniture.appendChild(meubleDiv);
 
         let meubleNameDiv = document.createElement('div');

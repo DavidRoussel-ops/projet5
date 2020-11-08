@@ -1,179 +1,551 @@
-body{
-    width: 100%;
-    height: 100%;
-    font-family: 'Londrina Solid', cursive;
-    background-color: rgba(52,73,94 ,1);
+@media screen and (max-width: 768px){
+    body {
+        width: 100%;
+        height: 100%;
+        font-family: 'Londrina Solid', cursive;
+        background-color: rgba(52, 73, 94, 1);
+    }
+
+    #container {
+        border-radius: 50px;
+        background-color: white;
+        max-width: 80%;
+        margin: 0 auto 1em;
+        font-family: 'Londrina Solid', cursive;
+        text-align: center;
+    }
+
+    #place {
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        margin-left: auto;
+        margin-right: auto;
+        padding-bottom: 5em;
+    }
+
+    #place2 {
+        display: block;
+        width: auto;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #place3 {
+        display: flex;
+        width: auto;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    header {
+        height: 5em;
+        width: 100%;
+    }
+
+    header h1 a{
+        color: white;
+    }
+
+    nav {
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        /*padding: 50px 60px 0 60px;*/
+    }
+
+    nav li {
+        margin-top: 0.5em;
+        margin-right: 0.5em;
+        list-style: none;
+        display: inline-block;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    nav li span {
+        padding-left: 5px;
+    }
+
+    li a {
+        border-radius: 20px;
+        padding: 5px;
+        background-color: #fff;
+        text-decoration: none;
+        color: black;
+    }
+
+    .cart a {
+        background-color: royalblue;
+        color: #fff;
+        cursor: pointer;
+        text-decoration: none;
+    }
+
+    h1 a {
+        color: white;
+    }
+
+    img {
+        width: 15em;
+        height: 15em;
+    }
+
+    .descrip {
+        color: rgba(52, 73, 94, 1);
+        height: auto;
+        font-size: 1em;
+    }
+
+    .object {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    .name {
+        color: rgba(52, 73, 94, 1);
+        font-size: 1.5em;
+        display: block;
+        width: 100%;
+    }
+
+    .price {
+        color: rgba(52, 73, 94, 1);
+        font-size: 1.5em;
+    }
+
+    #name {
+        display: block;
+    }
+
+    #picture {
+        margin-left: 3em;
+        margin-right: 3em;
+    }
+
+    #choice {
+        display: flex;
+        justify-content: center;
+        margin-top: 1.5em;
+        margin-bottom: 4em;
+        margin-right: 2em;
+    }
+
+    #cart {
+        display: flex;
+        justify-content: center;
+        margin-right: 2em;
+    }
+
+    #cart ion-icon {
+        border: 0.10em solid rgba(52, 73, 94, 1);
+        border-radius: 50%;
+        margin-top: 1em;
+        color: rgba(52, 73, 94, 1);
+        padding: 10px 10px 10px 10px;
+        font-size: 2em;
+        transition: 0.5s;
+    }
+
+    #cart ion-icon:hover {
+        border: 0.10em solid white;
+        background-color: rgba(52, 73, 94, 1);
+        color: white;
+    }
+
+    footer {
+        bottom: 0;
+        height: 4em;
+    }
+
+    footer ul {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    footer ul li {
+        font-size: 2em;
+        margin-top: 0.25em;
+        list-style-type: none;
+    }
+
+    footer ul li a {
+        background-color: rgba(52, 73, 94, 1);
+        color: white;
+        text-decoration: none;
+    }
 }
+@media (min-width: 768px) and (max-width: 991px){
+    body {
+        width: 100%;
+        height: 100%;
+        font-family: 'Londrina Solid', cursive;
+        background-color: rgba(52, 73, 94, 1);
+    }
 
+    #container {
+        border-radius: 50px;
+        background-color: white;
+        max-width: 80%;
+        margin: 0 auto 1em;
+        font-family: 'Londrina Solid', cursive;
+        text-align: center;
+    }
 
-#container{
-    background-color: white;
-    max-width: 80%;
-    margin: 0 auto;
-    font-family: 'Londrina Solid', cursive;
+    #place {
+        width: 90%;
+        display: flex;
+        justify-content: center;
+        margin-left: auto;
+        margin-right: auto;
+        padding-bottom: 5em;
+    }
+
+    #place2 {
+        display: block;
+        width: 12em;
+    }
+
+    #place3 {
+        display: block;
+        width: 12em;
+    }
+
+    header {
+        height: 5em;
+        width: 100%;
+    }
+
+    header h1 a{
+        color: white;
+    }
+
+    nav {
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        /*padding: 50px 60px 0 60px;*/
+    }
+
+    nav li {
+        margin-top: 0.5em;
+        margin-right: 0.5em;
+        list-style: none;
+        display: inline-block;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    nav li span {
+        padding-left: 5px;
+    }
+
+    li a {
+        border-radius: 20px;
+        padding: 5px;
+        background-color: #fff;
+        text-decoration: none;
+        color: black;
+    }
+
+    .cart a {
+        background-color: royalblue;
+        color: #fff;
+        cursor: pointer;
+        text-decoration: none;
+    }
+
+    h1 a {
+        color: white;
+    }
+
+    img {
+        width: 15em;
+        height: 15em;
+    }
+
+    .descrip {
+        color: rgba(52, 73, 94, 1);
+        height: auto;
+        font-size: 1em;
+    }
+
+    .object {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    .name {
+        color: rgba(52, 73, 94, 1);
+        font-size: 3em;
+        display: block;
+        width: 100%;
+    }
+
+    .price {
+        color: rgba(52, 73, 94, 1);
+        font-size: 1.5em;
+    }
+
+    #name {
+        display: block;
+    }
+
+    #picture {
+        margin-left: 3em;
+        margin-right: 3em;
+    }
+
+    #choice {
+        display: flex;
+        justify-content: center;
+        margin-top: 1.5em;
+        margin-bottom: 4em;
+        margin-right: 2em;
+    }
+
+    #cart {
+        display: flex;
+        justify-content: center;
+        margin-right: 2em;
+    }
+
+    #cart ion-icon {
+        border: 0.10em solid rgba(52, 73, 94, 1);
+        border-radius: 50%;
+        margin-top: 1em;
+        color: rgba(52, 73, 94, 1);
+        padding: 10px 10px 10px 10px;
+        font-size: 2em;
+        transition: 0.5s;
+    }
+
+    #cart ion-icon:hover {
+        border: 0.10em solid white;
+        background-color: rgba(52, 73, 94, 1);
+        color: white;
+    }
+
+    footer {
+        bottom: 0;
+        height: 4em;
+    }
+
+    footer ul {
+        display: flex;
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    footer ul li {
+        font-size: 2em;
+        margin-top: 0.25em;
+        margin-left: auto;
+        margin-right: auto;
+        list-style-type: none;
+        color: white;
+    }
+
+    footer ul li a {
+        background-color: rgba(52, 73, 94, 1);
+        color: white;
+        text-decoration: none;
+    }
 }
+@media screen and (min-width: 991px) {
+    body {
+        width: 100%;
+        height: 100%;
+        font-family: 'Londrina Solid', cursive;
+        background-color: rgba(52, 73, 94, 1);
+    }
 
-#place{
-    display: flex;
-    justify-content: center;
-    padding-bottom: 5em;
-}
 
-#place2{
-    display: block;
-    width: 12em;
-}
+    #container {
+        background-color: white;
+        max-width: 80%;
+        margin: 0 auto;
+        font-family: 'Londrina Solid', cursive;
+        text-align: center;
+    }
 
-#place3{
-    display: block;
-    width: 12em;
-}
+    #place {
+        display: flex;
+        justify-content: center;
+        padding-bottom: 5em;
+    }
 
-header{
-    height: 10em;
-    width: 100%;
-}
+    #place2 {
+        display: block;
+        width: 12em;
+    }
 
-nav{
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    padding: 50px 60px 0 60px;
-    font-family: 'Londrina Solid', cursive;
-}
+    #place3 {
+        display: block;
+        width: 12em;
+    }
 
-nav li{
-    list-style: none;
-    display: inline-block;
-    padding-right: 10px;
-    padding-left: 10px;
-}
+    header {
+        height: 8em;
+        width: 100%;
+    }
 
-nav li span{
-    padding-left: 5px;
-}
+    header h1 a{
+        color: white;
+    }
 
-li a{
-    padding: 5px;
-    background-color: #fff;
-    text-decoration: none;
-    color: black;
-}
+    nav {
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 50px 60px 0 60px;
+    }
 
-.cart a{
-    background-color: royalblue;
-    color: #fff;
-    cursor: pointer;
-    text-decoration: none;
-}
+    nav li {
+        margin-top: 0.5em;
+        margin-right: 0.5em;
+        list-style: none;
+        display: inline-block;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
 
-h1 a{
-    color: white;
-}
+    nav li span {
+        padding-left: 5px;
+    }
 
-img{
-    width: 25em;
-    height: 20em;
-}
+    li a {
+        border-radius: 20px;
+        padding: 5px;
+        background-color: #fff;
+        text-decoration: none;
+        color: black;
+    }
 
-.descrip{
-    color: rgba(52,73,94 ,1);
-    height: auto;
-    font-size: 1.5em;
-}
+    .cart a {
+        background-color: royalblue;
+        color: #fff;
+        cursor: pointer;
+        text-decoration: none;
+    }
 
-.object{
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-}
+    h1 a {
+        color: white;
+    }
 
-.name{
-    color: rgba(52,73,94 ,1);
-    font-size: 3em;
-    text-align: center;
-    display: block;
-    width: 100%;
-}
+    img {
+        width: 25em;
+        height: 20em;
+    }
 
-.price{
-    color: rgba(52,73,94 ,1);
-    font-size: 3em;
-}
+    .descrip {
+        color: rgba(52, 73, 94, 1);
+        height: auto;
+        font-size: 1.5em;
+    }
 
-#name{
-    display: block;
-}
+    .object {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+    }
 
-#picture{
-    width: 25em;
-    margin-left: 3em;
-    margin-right: 3em;
-}
+    .name {
+        color: rgba(52, 73, 94, 1);
+        font-size: 3em;
+        display: block;
+        width: 100%;
+    }
 
-#description{
-    width: 12em;
-    text-align: center;
-}
+    .price {
+        color: rgba(52, 73, 94, 1);
+        font-size: 3em;
+    }
 
-#price{
-    text-align: center;
-}
+    #name {
+        display: block;
+    }
 
-#choice{
-    display: flex;
-    justify-content: center;
-    margin-top: 3em;
-    margin-bottom: 6em;
-}
+    #picture {
+        width: 25em;
+        margin-left: 3em;
+        margin-right: 3em;
+    }
 
-#cart{
-    display: flex;
-    justify-content: center;
-}
+    #description {
+        width: 12em;
+    }
 
-#cart ion-icon{
-    border: 0.10em solid rgba(52,73,94 ,1);
-    border-radius: 50%;
-    color: rgba(52,73,94 ,1);
-    padding: 10px 10px 10px 10px;
-    font-size: 3em;
-    transition: 0.5s;
-}
+    #choice {
+        display: flex;
+        justify-content: center;
+        margin-top: 3em;
+        margin-bottom: 6em;
+    }
 
-#cart ion-icon:hover{
-    border: 0.10em solid white;
-    background-color: rgba(52,73,94 ,1);
-    color: white;
-}
+    #cart {
+        display: flex;
+        justify-content: center;
+    }
 
-footer{
-    bottom: 0;
-    height: 4em;
-}
+    #cart ion-icon {
+        border: 0.10em solid rgba(52, 73, 94, 1);
+        border-radius: 50%;
+        color: rgba(52, 73, 94, 1);
+        padding: 10px 10px 10px 10px;
+        font-size: 3em;
+        transition: 0.5s;
+    }
 
-footer ul{
-    display: flex;
-    width: 50%;
-    margin-left: auto;
-    margin-right: auto;
-}
+    #cart ion-icon:hover {
+        border: 0.10em solid white;
+        background-color: rgba(52, 73, 94, 1);
+        color: white;
+    }
 
-footer ul li {
-    font-size: 2em;
-    margin-top: 0.25em;
-    margin-left: auto;
-    margin-right: auto;
-    list-style-type: none;
-    color: white;
-}
+    footer {
+        bottom: 0;
+        height: 4em;
+    }
 
-footer ul li a{
-    background-color: rgba(52,73,94 ,1);
-    color: white;
-    text-decoration: none;
+    footer ul {
+        display: flex;
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    footer ul li {
+        font-size: 2em;
+        margin-top: 0.25em;
+        margin-left: auto;
+        margin-right: auto;
+        list-style-type: none;
+        color: white;
+    }
+
+    footer ul li a {
+        background-color: rgba(52, 73, 94, 1);
+        color: white;
+        text-decoration: none;
+    }
 }
