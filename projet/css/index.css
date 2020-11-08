@@ -2,15 +2,10 @@
     body {
         background-color: rgba(52, 73, 94, 1);
         display: flex;
-        justify-content: center;
-        align-items: center;
     }
 
     .container {
-        background-color: white;
-        position: relative;
         width: 100%;
-        height: 660px;
         margin: 2em auto 2em;
     }
 
@@ -39,32 +34,25 @@
     }
 
     #teddies {
-        position: absolute;
         width: 100%;
+        padding: 20px;
         background: rgba(52, 73, 94, 0.9);
-        opacity: 0;
-        transition: 0.5s;
     }
 
     #cameras {
-        position: absolute;
         width: 100%;
+        padding: 20px;
         background: rgba(52, 73, 94, 0.9);
-        opacity: 0;
-        transition: 0.5s;
     }
 
     #meubles {
-        position: absolute;
         width: 100%;
+        padding: 20px;
         background: rgba(52, 73, 94, 0.9);
-        opacity: 0;
-        transition: 0.5s;
     }
 
     .list-of-teddies {
         display: flex;
-        width: 100%;
         margin-left: auto;
         margin-right: auto;
         justify-content: space-between;
@@ -72,7 +60,6 @@
 
     .list-of-cam {
         display: flex;
-        width: 100%;
         margin-left: auto;
         margin-right: auto;
         justify-content: space-between;
@@ -80,37 +67,69 @@
 
     .List-of-furniture {
         display: flex;
-        width: 100%;
         margin-left: auto;
         margin-right: auto;
         justify-content: space-between;
     }
 
-    .name {
-        color: white;
-        height: 50px;
+    .teddy{
         text-align: center;
+        border-radius: 20px;
+        background-color: white;
+        margin-bottom: 2px;
+    }
+
+    .teddy:hover{
+        box-shadow: 10px 3px 3px white;
+    }
+
+    .cam{
+        text-align: center;
+        border-radius: 20px;
+        background-color: white;
+        margin-bottom: 2px;
+    }
+
+    .cam:hover{
+        box-shadow: 10px 3px 3px white;
+    }
+
+    .meuble{
+        text-align: center;
+        border-radius: 20px;
+        background-color: white;
+        margin-bottom: 2px;
+    }
+
+    .meuble:hover{
+        box-shadow: 10px 3px 3px white;
+    }
+
+    .name {
+        color: rgba(52, 73, 94, 0.9);
+        height: 50px;
     }
 
     .price {
-        color: white;
+        color: rgba(52, 73, 94, 0.9);
         height: 30px;
-        text-align: center;
     }
 
     .descrip {
-        text-align: center;
-        color: white;
+        color: rgba(52, 73, 94, 0.9);
     }
 
     .description {
-        text-align: center;
-        color: white;
+        color: rgba(52, 73, 94, 0.9);
     }
 
     header {
         height: 5em;
         width: 100%;
+    }
+
+    header h1 a{
+        color: white;
     }
 
     nav {
@@ -138,6 +157,7 @@
     }
 
     li a {
+        border-radius: 20px;
         padding: 5px;
         background-color: #fff;
         text-decoration: none;
@@ -152,8 +172,13 @@
     }
 
     img {
+
         width: 120px;
         height: 100px;
+        text-align: center;
+        position: center;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     section {
@@ -164,8 +189,7 @@
 
     a {
         display: block;
-        text-align: center;
-        color: white;
+        color: rgba(52, 73, 94, 0.9);
     }
 
     footer {
@@ -271,42 +295,53 @@
     }
 
     .teddy{
+        text-align: center;
         border-radius: 20px;
         border: 1px solid white;
         background-color: white;
+    }
+
+    .teddy:hover{
+        box-shadow: 10px 3px 3px white;
     }
 
     .cam{
+        text-align: center;
         border-radius: 20px;
         border: 1px solid white;
         background-color: white;
     }
 
+    .cam:hover{
+        box-shadow: 10px 3px 3px white;
+    }
+
     .meuble{
+        text-align: center;
         border-radius: 20px;
         border: 1px solid white;
         background-color: white;
+    }
+
+    .meuble:hover{
+        box-shadow: 10px 3px 3px white;
     }
 
     .name {
         color: rgba(52, 73, 94, 0.9);
         height: 50px;
-        text-align: center;
     }
 
     .price {
         color: rgba(52, 73, 94, 0.9);
         height: 30px;
-        text-align: center;
     }
 
     .descrip {
-        text-align: center;
         color: rgba(52, 73, 94, 0.9);
     }
 
     .description {
-        text-align: center;
         color: rgba(52, 73, 94, 0.9);
     }
 
@@ -357,9 +392,11 @@
     }
 
     img {
-        width: 150px;
-        height: 200px;
+        width: 120px;
+        height: 150px;
         position: center;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     section {
@@ -380,7 +417,6 @@
 
     a {
         display: block;
-        text-align: center;
         color: rgba(52, 73, 94, 0.9);
     }
 

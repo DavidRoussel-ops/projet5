@@ -7,7 +7,7 @@ function displayTeddies(teddies){
     for (let teddy of teddies){
         //Création de la grande div de teddy
         let teddyDiv = document.createElement('div');
-        teddyDiv.setAttribute('class', 'col-2 teddy');
+        teddyDiv.setAttribute('class', 'col-lg-2 col-md-6 col-xs-12 teddy');
         ListOfTeddies.appendChild(teddyDiv);
         // Dans la div teddy, on ajoute les 3 sous-éléments (div, div, img)
 

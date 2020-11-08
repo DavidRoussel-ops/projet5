@@ -7,7 +7,7 @@ function displayCams(cameras) {
     for (let cam of cameras){
 
         let camDiv = document.createElement('div');
-        camDiv.setAttribute('class', 'col-2 cam');
+        camDiv.setAttribute('class', 'col-md-2 col-sm-6 col-xs-12 cam');
         ListOfCam.appendChild(camDiv);
 
         let camNameDiv = document.createElement('div');
