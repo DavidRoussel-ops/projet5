@@ -4,7 +4,7 @@ function displayCams(cameras) {
 
     let ListOfCam = document.createElement('div');
     ListOfCam.setAttribute('class', 'list-of-cam row');
-    for (let cam of cameras){
+    for (let cam of cameras) {
 
         let camDiv = document.createElement('div');
         camDiv.setAttribute('class', 'col-lg-2 col-md-6 col-xs-12 cam');
@@ -17,7 +17,7 @@ function displayCams(cameras) {
 
         let camPriceDiv = document.createElement('div');
         camPriceDiv.setAttribute('class', 'price');
-        camPriceDiv.textContent = cam.price/100 + ",00 €";
+        camPriceDiv.textContent = cam.price / 100 + ",00 €";
         camDiv.appendChild(camPriceDiv);
 
         let camPicture = document.createElement('img');

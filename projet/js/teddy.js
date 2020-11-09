@@ -1,10 +1,10 @@
-function displayTeddies(teddies){
+function displayTeddies(teddies) {
     console.log("Affichage de la liste de teddies.")
     teddies = JSON.parse(teddies)
     //Création de la div "list-of-teddies"
     let ListOfTeddies = document.createElement('div')
     ListOfTeddies.setAttribute('class', 'list-of-teddies row');
-    for (let teddy of teddies){
+    for (let teddy of teddies) {
         //Création de la grande div de teddy
         let teddyDiv = document.createElement('div');
         teddyDiv.setAttribute('class', 'col-lg-2 col-md-6 col-xs-12 teddy');
@@ -20,7 +20,7 @@ function displayTeddies(teddies){
         //Deuxième div pour le prix
         let teddyPriceDiv = document.createElement('div');
         teddyPriceDiv.setAttribute('class', 'price');
-        teddyPriceDiv.textContent = teddy.price/100 + ",00 €";
+        teddyPriceDiv.textContent = teddy.price / 100 + ",00 €";
         teddyDiv.appendChild(teddyPriceDiv);
 
         //Troisième élement de type img pour l'image

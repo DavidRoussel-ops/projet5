@@ -1,6 +1,6 @@
 let cart = document.getElementById('cart');
 
-if (cart != null){
+if (cart != null) {
     cart.addEventListener("click", getproduct);
 }
 

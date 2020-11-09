@@ -4,7 +4,7 @@ function displayMeubles(furniture) {
 
     let ListOfFurniture = document.createElement('div')
     ListOfFurniture.setAttribute('class', 'List-of-furniture row');
-    for (let meuble of furniture){
+    for (let meuble of furniture) {
 
         let meubleDiv = document.createElement('div');
         meubleDiv.setAttribute('class', 'col-lg-2 col-md-6 col-xs-12 meuble');
@@ -17,7 +17,7 @@ function displayMeubles(furniture) {
 
         let meublePriceDiv = document.createElement('div');
         meublePriceDiv.setAttribute('class', 'price');
-        meublePriceDiv.textContent = meuble.price/100 + ",00 €";
+        meublePriceDiv.textContent = meuble.price / 100 + ",00 €";
         meubleDiv.appendChild(meublePriceDiv);
 
         let meublePicture = document.createElement('img');

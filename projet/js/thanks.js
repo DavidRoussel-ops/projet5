@@ -1,4 +1,5 @@
 thanksYou()
+
 function thanksYou() {
     let commandeNumber = localStorage.getItem("orderId");
     let newContainer = document.getElementById("thanksId");
@@ -9,7 +10,7 @@ function thanksYou() {
     let listWish = localStorage.getItem("productsInCart");
     listWish = JSON.parse(listWish);
     let firstContainer = document.getElementById("thanks");
-    for (const [key, value] of Object.entries(listWish)){
+    for (const [key, value] of Object.entries(listWish)) {
         let newWish = document.createElement('div');
         newWish.setAttribute('class', 'new-wish');
         firstContainer.appendChild(newWish);

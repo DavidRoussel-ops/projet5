@@ -5,26 +5,26 @@ let cameras = document.getElementById("cameras");
 let meuble = document.getElementById("meuble");
 let meubles = document.getElementById("meubles");
 
-ted.addEventListener("click", () =>{
-    if (getComputedStyle(teddies).display !== "none"){
+ted.addEventListener("click", () => {
+    if (getComputedStyle(teddies).display !== "none") {
         teddies.style.display = "none";
-    }else {
+    } else {
         teddies.style.display = "block";
     }
 });
 
-cam.addEventListener("click", () =>{
-    if (getComputedStyle(cameras).display !== "none"){
+cam.addEventListener("click", () => {
+    if (getComputedStyle(cameras).display !== "none") {
         cameras.style.display = "none";
-    }else {
+    } else {
         cameras.style.display = "block";
     }
 });
 
-meuble.addEventListener("click", () =>{
-    if (getComputedStyle(meubles).display !== "none"){
+meuble.addEventListener("click", () => {
+    if (getComputedStyle(meubles).display !== "none") {
         meubles.style.display = "none";
-    }else {
+    } else {
         meubles.style.display = "block";
     }
 });

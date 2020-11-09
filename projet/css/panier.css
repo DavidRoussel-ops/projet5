@@ -1,217 +1,442 @@
-body{
-    background-color: rgba(52,73,94 ,1);
-    font-family: 'Londrina Solid', cursive;
+@media screen and (max-width: 991px) {
+    body {
+        background-color: rgba(52, 73, 94, 1);
+        font-family: 'Londrina Solid', cursive;
+    }
+
+    #container {
+        border-radius: 50px;
+        background-color: white;
+        max-width: 80%;
+        margin: 0 auto;
+    }
+
+    img {
+        width: 70px;
+        height: 70px;
+    }
+
+    header {
+        height: 5em;
+        width: 100%;
+    }
+
+    nav {
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        /*padding: 50px 60px 0 60px;*/
+    }
+
+    nav li {
+        margin-top: 0.5em;
+        margin-right: 0.5em;
+        list-style: none;
+        display: inline-block;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    nav li span {
+        padding-left: 5px;
+    }
+
+    li a {
+        border-radius: 20px;
+        padding: 5px;
+        background-color: #fff;
+        text-decoration: none;
+        color: black;
+    }
+
+    .cart a {
+        background-color: royalblue;
+        color: #fff;
+        cursor: pointer;
+        text-decoration: none;
+    }
+
+    h1 a {
+        color: white;
+    }
+
+    #products-container {
+        justify-content: space-between;
+        margin: auto;
+        padding-top: 2em;
+    }
+
+    #product-header {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 2px solid lightgray;
+        margin: auto;
+        text-align: center;
+    }
+
+    #remove {
+        width: 100px;
+    }
+
+    #product-title {
+        width: 100px;
+    }
+
+    #product-picture {
+        width: 100px;
+    }
+
+    #product-price {
+        width: 100px;
+    }
+
+    #quantity {
+        width: 100px;
+    }
+
+    #subtotal {
+        width: 100px;
+    }
+
+    #productBasket {
+        margin-bottom: 3em;
+    }
+
+    .new-caddy {
+        display: flex;
+        justify-content: space-between;
+        text-align: center;
+        margin: 1em auto 1em auto;
+    }
+
+    .sub-total {
+        width: 100px;
+    }
+
+    .remove-item {
+        width: 100px;
+    }
+
+    .caddy-name {
+        width: 100px;
+    }
+
+    .caddy-price {
+        width: 100px;
+    }
+
+    .caddy-incart {
+        width: 100px;
+    }
+
+    form {
+        /* Uniquement centrer le formulaire sur la page */
+        margin-left: auto;
+        margin-right: auto;
+        padding-bottom: 2em;
+        width: 300px;
+    }
+
+    label {
+        /* Pour être sûrs que toutes les étiquettes ont même taille et sont correctement alignées */
+        display: inline-block;
+        width: 90px;
+        text-align: right;
+    }
+
+    input, textarea {
+        /* Pour s'assurer que tous les champs texte ont la même police.
+           Par défaut, les textarea ont une police monospace */
+        font: 1em sans-serif;
+
+        /* Pour que tous les champs texte aient la même dimension */
+        width: 300px;
+        box-sizing: border-box;
+
+        /* Pour harmoniser le look & feel des bordures des champs texte */
+        border: 1px solid #999;
+    }
+
+    input:focus, textarea:focus {
+        /* Pour souligner légèrement les éléments actifs */
+        border-color: #000;
+    }
+
+    textarea {
+        /* Pour aligner les champs texte multi‑ligne avec leur étiquette */
+        vertical-align: top;
+
+        /* Pour donner assez de place pour écrire du texte */
+        height: 5em;
+    }
+
+    .button {
+        /* Cette marge supplémentaire représente grosso modo le même espace que celui
+           entre les étiquettes et les champs texte */
+        width: 60px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    button a {
+        text-decoration: none;
+    }
+
+    footer {
+        bottom: 0;
+        height: 4em;
+    }
+
+    footer ul {
+        display: flex;
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    footer ul li {
+        font-size: 2em;
+        margin-top: 0.25em;
+        margin-left: auto;
+        margin-right: auto;
+        list-style-type: none;
+        color: white;
+    }
+
+    footer ul li a {
+        background-color: rgba(52, 73, 94, 1);
+        color: white;
+        text-decoration: none;
+    }
 }
 
-#container{
-    background-color: white;
-    max-width: 80%;
-    margin: 0 auto;
-}
+@media screen and (min-width: 991px) {
+    body {
+        background-color: rgba(52, 73, 94, 1);
+        font-family: 'Londrina Solid', cursive;
+    }
 
-img{
-    width: 100px;
-    height: 100px;
-}
+    #container {
+        border-radius: 50px;
+        background-color: white;
+        max-width: 80%;
+        margin: 0 auto;
+    }
 
-header{
-    height: 10em;
-    width: 100%;
-}
+    img {
+        width: 100px;
+        height: 100px;
+    }
 
-nav{
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    padding: 50px 60px 0 60px;
-}
+    header {
+        height: 8em;
+        width: 100%;
+    }
 
-nav li{
-    list-style: none;
-    display: inline-block;
-    padding-right: 10px;
-    padding-left: 10px;
-}
+    header h1 a {
+        color: white;
+    }
 
-nav li span{
-    padding-left: 5px;
-}
+    nav {
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 50px 60px 0 60px;
+    }
 
-li a{
-    padding: 5px;
-    background-color: #fff;
-    text-decoration: none;
-}
+    nav li {
+        margin-top: 0.5em;
+        margin-right: 0.5em;
+        list-style: none;
+        display: inline-block;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
 
-.cart a{
-    background-color: royalblue;
-    color: #fff;
-    cursor: pointer;
-    text-decoration: none;
-}
+    nav li span {
+        padding-left: 5px;
+    }
 
-h1 a{
-    color: white;
-}
+    li a {
+        border-radius: 20px;
+        padding: 5px;
+        background-color: #fff;
+        text-decoration: none;
+        color: black;
+    }
 
-#products-container{
-    max-width: 650px;
-    justify-content: space-between;
-    margin: auto;
-    padding-top: 5em;
-}
+    .cart a {
+        background-color: royalblue;
+        color: #fff;
+        cursor: pointer;
+        text-decoration: none;
+    }
 
-#product-header{
-    width: 100%;
-    max-width: 650px;
-    display: flex;
-    justify-content: space-between;
-    border-bottom: 2px solid lightgray;
-    margin: auto;
-    text-align: center;
-}
+    h1 a {
+        color: white;
+    }
 
-#remove{
-    width: 100px;
-}
+    #products-container {
+        max-width: 650px;
+        justify-content: space-between;
+        margin: auto;
+        padding-top: 5em;
+    }
 
-#product-title{
-    width: 100px;
-}
+    #product-header {
+        width: 100%;
+        max-width: 650px;
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 2px solid lightgray;
+        margin: auto;
+        text-align: center;
+    }
 
-#product-picture{
-    width: 100px;
-}
+    #remove {
+        width: 100px;
+    }
 
-#product-price{
-    width: 100px;
-}
+    #product-title {
+        width: 100px;
+    }
 
-#quantity{
-    width: 100px;
-}
+    #product-picture {
+        width: 100px;
+    }
 
-#subtotal{
-    width: 100px;
-}
+    #product-price {
+        width: 100px;
+    }
 
-#productBasket{
-    margin-bottom: 5em;
-}
+    #quantity {
+        width: 100px;
+    }
 
-.new-caddy{
-    display: flex;
-    justify-content: space-between;
-    text-align: center;
-    margin: 1em auto 1em auto;
-}
+    #subtotal {
+        width: 100px;
+    }
 
-.sub-total{
-    width: 100px;
-}
+    #productBasket {
+        margin-bottom: 5em;
+    }
 
-.remove-item{
-    width: 100px;
-}
+    .new-caddy {
+        display: flex;
+        justify-content: space-between;
+        text-align: center;
+        margin: 1em auto 1em auto;
+    }
 
-.caddy-name{
-    width: 100px;
-}
+    .sub-total {
+        width: 100px;
+    }
 
-.caddy-price{
-    width: 100px;
-}
+    .remove-item {
+        width: 100px;
+    }
 
-.caddy-incart{
-    width: 100px;
-}
+    .caddy-name {
+        width: 100px;
+    }
 
-form {
-    /* Uniquement centrer le formulaire sur la page */
-    margin: 0 auto;
-    width: 400px;
-    /* Encadré pour voir les limites du formulaire */
-    padding: 1em;
-    border: 1px solid #CCC;
-    border-radius: 1em;
-}
+    .caddy-price {
+        width: 100px;
+    }
 
-form div + div {
-    margin-top: 1em;
-}
+    .caddy-incart {
+        width: 100px;
+    }
 
-label {
-    /* Pour être sûrs que toutes les étiquettes ont même taille et sont correctement alignées */
-    display: inline-block;
-    width: 90px;
-    text-align: right;
-}
+    form {
+        /* Uniquement centrer le formulaire sur la page */
+        margin: 0 auto;
+        width: 400px;
+        padding-bottom: 2em;
+    }
 
-input, textarea {
-    /* Pour s'assurer que tous les champs texte ont la même police.
-       Par défaut, les textarea ont une police monospace */
-    font: 1em sans-serif;
+    form div + div {
+        margin-top: 1em;
+    }
 
-    /* Pour que tous les champs texte aient la même dimension */
-    width: 300px;
-    box-sizing: border-box;
+    label {
+        /* Pour être sûrs que toutes les étiquettes ont même taille et sont correctement alignées */
+        display: inline-block;
+        width: 90px;
+        text-align: right;
+    }
 
-    /* Pour harmoniser le look & feel des bordures des champs texte */
-    border: 1px solid #999;
-}
+    input, textarea {
+        /* Pour s'assurer que tous les champs texte ont la même police.
+           Par défaut, les textarea ont une police monospace */
+        font: 1em sans-serif;
 
-input:focus, textarea:focus {
-    /* Pour souligner légèrement les éléments actifs */
-    border-color: #000;
-}
+        /* Pour que tous les champs texte aient la même dimension */
+        width: 300px;
+        box-sizing: border-box;
 
-textarea {
-    /* Pour aligner les champs texte multi‑ligne avec leur étiquette */
-    vertical-align: top;
+        /* Pour harmoniser le look & feel des bordures des champs texte */
+        border: 1px solid #999;
+    }
 
-    /* Pour donner assez de place pour écrire du texte */
-    height: 5em;
-}
+    input:focus, textarea:focus {
+        /* Pour souligner légèrement les éléments actifs */
+        border-color: #000;
+    }
 
-.button {
-    /* Cette marge supplémentaire représente grosso modo le même espace que celui
-       entre les étiquettes et les champs texte */
-    width: 60px;
-    margin-left: auto;
-    margin-right: auto;
-}
+    textarea {
+        /* Pour aligner les champs texte multi‑ligne avec leur étiquette */
+        vertical-align: top;
 
-button a{
-    text-decoration: none;
-}
+        /* Pour donner assez de place pour écrire du texte */
+        height: 5em;
+    }
 
-footer{
-    bottom: 0;
-    height: 4em;
-}
+    .button {
+        /* Cette marge supplémentaire représente grosso modo le même espace que celui
+           entre les étiquettes et les champs texte */
+        width: 60px;
+        margin-left: auto;
+        margin-right: auto;
+    }
 
-footer ul{
-    display: flex;
-    width: 50%;
-    margin-left: auto;
-    margin-right: auto;
-}
+    button a {
+        text-decoration: none;
+    }
 
-footer ul li {
-    font-size: 2em;
-    margin-top: 0.25em;
-    margin-left: auto;
-    margin-right: auto;
-    list-style-type: none;
-    color: white;
-}
+    footer {
+        bottom: 0;
+        height: 4em;
+    }
 
-footer ul li a{
-    background-color: rgba(52,73,94 ,1);
-    color: white;
-    text-decoration: none;
+    footer ul {
+        display: flex;
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    footer ul li {
+        font-size: 2em;
+        margin-top: 0.25em;
+        margin-left: auto;
+        margin-right: auto;
+        list-style-type: none;
+        color: white;
+    }
+
+    footer ul li a {
+        background-color: rgba(52, 73, 94, 1);
+        color: white;
+        text-decoration: none;
+    }
 }
