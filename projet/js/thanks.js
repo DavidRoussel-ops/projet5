@@ -1,6 +1,7 @@
 thanksYou()
 
 function thanksYou() {
+    let total = 0;
     let commandeNumber = localStorage.getItem("orderId");
     let newContainer = document.getElementById("thanksId");
     let thanksSpitch = document.createElement('div');
@@ -28,5 +29,7 @@ function thanksYou() {
         let newWishImg = document.createElement('img');
         newWishImg.setAttribute('src', value.imageUrl);
         newWish.appendChild(newWishImg);
+
+        document.querySelector('.total span').textContent = total += value.price / 100 * value.inCart;
     }
 }
