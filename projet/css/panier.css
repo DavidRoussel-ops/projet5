@@ -187,6 +187,12 @@
         text-decoration: none;
     }
 
+    #erreur{
+        text-align: center;
+        color: red;
+        padding-bottom: 1em;
+    }
+
     footer {
         bottom: 0;
         height: 4em;
@@ -411,6 +417,12 @@
 
     button a {
         text-decoration: none;
+    }
+
+    #erreur{
+        text-align: center;
+        color: red;
+        padding-bottom: 1em;
     }
 
     footer {

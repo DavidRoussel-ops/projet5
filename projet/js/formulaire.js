@@ -2,6 +2,24 @@
 document.getElementById('validation').addEventListener("submit", function (e) {
     e.preventDefault();
 
+    //Variable d'erreur.
+    let erreur;
+
+    //Variable récupérant les inputs du fichier.
+    let inputs = document.getElementsByTagName('input');
+
+    //Boucle qui vérifie si les inputs sont bien remplies.
+    for (var i = 0; i < inputs.length; i++){
+        if (!inputs[i].value){
+            erreur = "Veuillez renseigner tous les champs."
+        }
+    }
+
+    if (erreur){
+        document.getElementById('erreur').innerHTML = erreur;
+        return false
+    }
+
     let xhr = new XMLHttpRequest();
 
     let url = "http://localhost:3000/api/teddies/order";
@@ -18,16 +36,6 @@ document.getElementById('validation').addEventListener("submit", function (e) {
         },
         "products": products
     }
-
-    function input(){
-        document.getElementsByTagName("input");
-        if (data2 === true){
-            xhr.send();
-        }else {
-            alert("Vous n'avez pas remplie tout les champs.")
-        }
-    }
-    input();
 
     //Fonction qui vérifie la requette XMLHTTP.
     xhr.onreadystatechange = function () {
