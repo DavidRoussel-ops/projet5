@@ -1,3 +1,4 @@
+//Fonction permettant de récupérrer la liste des meubles.
 function displayMeubles(furniture) {
     console.log("affichage de la liste des meubles.")
     furniture = JSON.parse(furniture)

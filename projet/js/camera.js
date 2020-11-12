@@ -1,3 +1,4 @@
+//Fonction permettant de récupérrer la liste des appareils photos.
 function displayCams(cameras) {
     console.log("Affichage de la liste de caméras.")
     cameras = JSON.parse(cameras)

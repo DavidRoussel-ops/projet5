@@ -9,6 +9,7 @@
         background-color: white;
         max-width: 80%;
         margin: 0 auto;
+        text-align: center;
     }
 
 
@@ -96,6 +97,10 @@
         height: 100px;
     }
 
+    .retour{
+        margin-bottom: 1em;
+    }
+
     footer {
         bottom: 0;
         height: 4em;
@@ -135,6 +140,7 @@
         background-color: white;
         max-width: 80%;
         margin: 0 auto;
+        text-align: center;
     }
 
     header {
@@ -224,6 +230,10 @@
     img {
         width: 100px;
         height: 100px;
+    }
+
+    .retour{
+        margin-bottom: 1em;
     }
 
     footer {

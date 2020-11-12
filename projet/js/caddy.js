@@ -1,5 +1,5 @@
 setAllItems()
-
+//Fonction affichant les articles et le total dans le panier avant confirmation.
 function setAllItems() {
     document.querySelector('.total span').textContent = 0;
     let listOfItems = localStorage.getItem("productsInCart");
@@ -16,6 +16,7 @@ function setAllItems() {
         let removeCaddy = document.createElement('div');
         removeCaddy.setAttribute('class', 'remove-item');
         removeCaddy.innerHTML = '<ion-icon name="trash-outline"></ion-icon>';
+        //Fonction qui permet de retirer un article du panier.
         removeCaddy.addEventListener('click', function () {
             let Cart = JSON.parse(localStorage.getItem("productsInCart"))
             for (const [key, value] of Object.entries(Cart)) {

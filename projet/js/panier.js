@@ -4,6 +4,7 @@ if (cart != null) {
     cart.addEventListener("click", getproduct);
 }
 
+//Fonction permettant de récupérer un élément grace à son id et son type.
 function getproduct() {
     const queryString = window.location.search;
     const urlParams = new URLSearchParams(queryString);
@@ -13,13 +14,14 @@ function getproduct() {
     ajaxGet("http://localhost:3000/api/" + type + "/" + objectId, addCart);
 }
 
+//Fonction qui sert au callback de l'appel fait dans la fonction getproduct
 function addCart(product) {
     product = JSON.parse(product);
     cartNumbers(product);
     totalCost(product);
 }
 
-
+//Fonction affichant le nombre d'article au panier.
 function onLoadCartNumbers() {
     let productNumbers = localStorage.getItem('cartNumbers');
     if (productNumbers) {
@@ -28,9 +30,8 @@ function onLoadCartNumbers() {
 }
 
 
-// fonction donnant une clés et une valeur au local storage
+//Fonction permettant le rajoute d'arclicles au panier.
 function cartNumbers(product) {
-    console.log('le produit selectionner est', product);
     let productNumbers = localStorage.getItem('cartNumbers');
     productNumbers = parseInt(productNumbers);
 
@@ -45,6 +46,7 @@ function cartNumbers(product) {
     setItems(product);
 }
 
+//Fonction donnant une valeur à la clés.
 function setItems(product) {
     let cartItems = localStorage.getItem('productsInCart');
     cartItems = JSON.parse(cartItems);
@@ -68,6 +70,7 @@ function setItems(product) {
     (cartItems));
 }
 
+//Fonction qui permet le calcul du total des articles.
 function totalCost(product) {
     //console.log('le ^prix du produit est', product.price);
     let cartCost = localStorage.getItem('totalCost');

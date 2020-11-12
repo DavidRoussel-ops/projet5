@@ -1,5 +1,5 @@
 thanksYou()
-
+//Fonction affichant un message de remerciement avec le total de la commande et l'orderId de la commande.
 function thanksYou() {
     let total = 0;
     let commandeNumber = localStorage.getItem("orderId");
@@ -32,4 +32,13 @@ function thanksYou() {
 
         document.querySelector('.total span').textContent = total += value.price / 100 * value.inCart;
     }
+    let getBack = document.createElement('button');
+    getBack.setAttribute('class', 'retour');
+    getBack.textContent = "Retour";
+    firstContainer.appendChild(getBack);
+    //Fonction ramenant à l'index et vide le localstorage.
+    getBack.addEventListener('click', function () {
+        window.location.href = "index.html";
+        localStorage.clear();
+    })
 }

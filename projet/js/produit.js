@@ -1,5 +1,5 @@
+//Fonction qui permet de récupérer l'Id et le type de l'article selectionné.
 document.addEventListener("DOMContentLoaded", function (event) {
-
     const queryString = window.location.search;
     const urlParams = new URLSearchParams(queryString);
     let objectId = urlParams.get('id');

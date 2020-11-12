@@ -1,3 +1,4 @@
+//Fonction permettant de récupérrer la liste des Teddy.
 function displayTeddies(teddies) {
     console.log("Affichage de la liste de teddies.")
     teddies = JSON.parse(teddies)

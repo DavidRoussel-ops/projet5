@@ -1,3 +1,4 @@
+//Fonction qui fait l'appel à l'API.
 function ajaxGet(url, callback) {
     const play = new Promise((resolve, reject) => {
         const playing = true;

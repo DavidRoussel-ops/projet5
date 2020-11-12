@@ -1,3 +1,4 @@
+//Fonction affichant l'article de la page produit.
 function displayObject(object) {
     console.log("Affichage de l'objet.")
     object = JSON.parse(object)

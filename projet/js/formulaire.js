@@ -1,3 +1,4 @@
+//Fonction qui fait le post.
 document.getElementById('validation').addEventListener("submit", function (e) {
     e.preventDefault();
 
@@ -18,10 +19,19 @@ document.getElementById('validation').addEventListener("submit", function (e) {
         "products": products
     }
 
+    function input(){
+        document.getElementsByTagName("input");
+        if (data2 === true){
+            xhr.send();
+        }else {
+            alert("Vous n'avez pas remplie tout les champs.")
+        }
+    }
+    input();
 
+    //Fonction qui vérifie la requette XMLHTTP.
     xhr.onreadystatechange = function () {
         if (this.readyState === 4) {
-            console.log();
             let data = JSON.parse(this.response);
             let orderId = data.orderId;
             localStorage.setItem("orderId", orderId)
@@ -29,6 +39,8 @@ document.getElementById('validation').addEventListener("submit", function (e) {
             console.log(this.readyState);
         }
     };
+
+    //Promesse et post du panier.
     const promPost = new Promise((resolve, reject) => {
         xhr.open('POST', url, true);
         xhr.setRequestHeader('Content-Type', 'application/json');
@@ -41,7 +53,6 @@ document.getElementById('validation').addEventListener("submit", function (e) {
         }
     })
     promPost.then(() => {
-        console.log("C'est bon!")
         window.location.href = "formulaire.html";
     }).catch(() => {
         alert("Une erreur est arriver")
