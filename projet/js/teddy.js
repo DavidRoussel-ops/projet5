@@ -1,6 +1,5 @@
 //Fonction permettant de récupérrer la liste des Teddy.
 function displayTeddies(teddies) {
-    console.log("Affichage de la liste de teddies.")
     teddies = JSON.parse(teddies)
     //Création de la div "list-of-teddies"
     let ListOfTeddies = document.createElement('div')
@@ -10,7 +9,6 @@ function displayTeddies(teddies) {
         let teddyDiv = document.createElement('div');
         teddyDiv.setAttribute('class', 'col-lg-2 col-md-6 col-xs-12 teddy');
         ListOfTeddies.appendChild(teddyDiv);
-        // Dans la div teddy, on ajoute les 3 sous-éléments (div, div, img)
 
         //Première div pour le nom
         let teddyNameDiv = document.createElement('div');
