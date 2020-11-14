@@ -1,5 +1,7 @@
+//Variable qui regarde l'élément qui possède un id 'cart'.
 let cart = document.getElementById('cart');
 
+//Instruction si cart et différent de null.
 if (cart != null) {
     cart.addEventListener("click", getproduct);
 }

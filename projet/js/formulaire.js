@@ -10,22 +10,28 @@ document.getElementById('validation').addEventListener("submit", function (e) {
 
     //Boucle qui vérifie si les inputs sont bien remplies.
     for (var i = 0; i < inputs.length; i++){
+        //Instruction vérifiant tous les inputs.
         if (!inputs[i].value){
             erreur = "Veuillez renseigner tous les champs."
         }
     }
 
+    //Instruction à afficher en cas d'erreur.
     if (erreur){
         document.getElementById('erreur').innerHTML = erreur;
         return false
     }
 
+    //Variable contenant une requette xmlhttp.
     let xhr = new XMLHttpRequest();
 
+    //Variable contenant l'url à saisir pour le post.
     let url = "http://localhost:3000/api/teddies/order";
 
+    //Variable contenant un tableau vide.
     let products = [];
 
+    //Variable contenant un objet 'contact' et 'products'.
     let data2 = {
         "contact": {
             "firstName": document.getElementById('firstName').value,
